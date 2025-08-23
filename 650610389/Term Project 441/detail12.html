@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายละเอียดร้านอาหาร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* คำอธิบายอยู่ตรงกลาง */
+    h1, h2 { text-align: center; margin: 20px 0 10px; }
+    main { padding: 0 30px 40px; max-width: 900px; margin: auto; }
+    p { line-height: 1.6; }
+    footer { text-align: center; padding: 20px 0 40px; font-size: 17px; }
+
+    body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+    /* พื้นหลังแบบจาง ๆ */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.wongnai.com/p/1920x0/2021/02/13/5a082dcbd21549be8c90c871a24970d6.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* ปรับความจาง */
+    z-index: -1;
+  }
+
+  .site-header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>รายละเอียดร้าน</h1>
+  </header>
+
+  <main class="detail">
+
+    <section class="image-row">
+      <img src="https://img.wongnai.com/p/256x256/2022/11/07/f1ae250a2c6241c98528387ff1ac9d74.jpg" style="width: 100%; max-width: 400px;">
+      <img src="https://img.wongnai.com/p/1920x0/2023/06/25/3d24da0b8aff425e8dbe9a8481baa024.jpg" style="width: 100%; max-width: 300px;">
+      <img src="https://img.wongnai.com/p/256x256/2020/12/27/6b3ccdf4c11e41fb9773323ca28b2f6e.jpg" style="width: 100%; max-width: 400px;"> 
+    </section>
+
+      <h2>เว-ฬา-ดี</h2>
+      <p>ร้าน เว-ฬา-ดี อิ่มอร่อยกับอาหารไทยรสเลิศท่ามกลางบรรยากาศสุดประทับใจในเชียงใหม่ โดดเด่นด้วยบรรยากาศที่สวยงาม อาหารอร่อย และ บริการที่ดีภายในร้านตกแต่งแบบอินดัสเทรียลผสมความทันสมัยในแบบทรอปิคัลด้วยไม้ใบประดิษฐ์สีเขียวชอุ่มจากเพดานจรดพื้น ให้ความรู้สึกสดชื่นผ่อนคลายเหมาะนั่งสนทนากับเพื่อนและครอบครัว เมนูซิกเนเจอร์ที่หลายคนติดใจอย่าง ไข่ลูกเขย สายบัวผัดกะปิกุ้งสด และ ผักหวานปลาแห้งไข่มดแดง </p>
+      <p><strong>ที่อยู่ :</strong> 291 ม.9 ต.หนองจ๊อม อ.สันทราย, Chiang Mai, 50210, ประเทศไทย</p>
+      <p><strong>เปิดบริการ :</strong> ทุกวัน เวลา 11:00 - 21:00 น.</p>
+    </section>
+    
+     <!-- ปุ่มแชร์ -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="share-fb" style="padding: 10px 20px; margin: 5px; background: #3b5998; color: white; border: none; border-radius: 5px; cursor: pointer;">📘 แชร์ไป Facebook</button>
+  <button id="copy-link" style="padding: 10px 20px; margin: 5px; background: #555; color: white; border: none; border-radius: 5px; cursor: pointer;">🔗 คัดลอกลิงก์</button>
+</div>
+
+<script>
+  const pageUrl = window.location.href;
+  const pageTitle = document.querySelector("h2").innerText;
+
+  // แชร์ไป Facebook
+  document.getElementById("share-fb").addEventListener("click", () => {
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    window.open(fbUrl, "_blank", "width=600,height=400");
+  });
+
+  // คัดลอกลิงก์
+  document.getElementById("copy-link").addEventListener("click", () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      alert("คัดลอกลิงก์แล้ว!");
+    });
+  });
+</script>
+    </main>
+
+  <footer class="site-footer">
+    <a href="index.html">← กลับหน้าแรก</a><br>
+    Michelin Guide Chiang Mai
+  </footer>
+    
+</body>
+</html>

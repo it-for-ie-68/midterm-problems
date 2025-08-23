@@ -1,0 +1,482 @@
+/* รีเซ็ต CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';    
+    line-height: 1.6;                    
+    color: #333;                         
+    background: #f8f9fa;                 
+}
+
+/* หน้าแรก & Welcome */ 
+.title {
+    text-align: center;                  
+    padding: 30px 0;                     
+    font-size: 28px;                      
+                         
+}
+
+.card-container {
+    display: flex;                       
+    justify-content: center;             
+    gap: 30px;                           
+    padding: 0 40px 40px 40px;           
+    flex-wrap: wrap;                     
+}
+
+.card {
+    background: #fff;                    
+    padding: 20px;                       
+    width: 300px;                        
+    border-radius: 12px;                 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    text-align: center;                         
+}
+
+.card:hover {
+    transform: translateY(-5px);         
+}
+
+.card img {
+    width: 100%;                         
+    height: auto;                        
+    border-radius: 10px;                 
+    object-fit: cover;                   
+}
+
+.card h2 {
+    margin: 15px 0 10px;                 
+    font-size: 20px;                     
+    color: #222;                         
+}
+
+.card p {
+    font-size: 14px;                     
+    color: #555;                         
+    margin-bottom: 10px;                  
+}
+
+/* หน้าหลักด้านใน */
+.header {
+    display: flex;                       
+    justify-content: space-between;      
+    align-items: center;                 
+    padding: 20px 60px;                  
+    background: #fff;                    
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+.logo {
+    font-size: 18px;                     
+    font-weight: 600;                    
+    color: #333;                         
+    text-decoration: none;               
+}
+
+.nav-menu {
+    display: flex;                       
+    list-style: none;                    
+    gap: 40px;                           
+}
+
+.nav-menu a {
+    color: #666;                         
+    text-decoration: none;               
+    font-size: 14px;                     
+}
+
+.nav-menu a:hover {
+    color: orange;                      
+}
+
+.main-container {
+    margin-top: 40px;                    
+    padding: 40px 60px;                  
+}
+
+.content-wrapper {
+    display: grid;                       
+    grid-template-columns: 1fr 1fr;      
+    gap: 80px;                           
+    max-width: 1200px;                   
+    margin: 0 auto;                      
+}
+
+.content-section {
+    display: flex;                       
+    flex-direction: column;              
+    justify-content: center;             
+}
+
+.main-heading {
+    font-size: 64px;                     
+    font-weight: 700;                    
+    line-height: 1.1;                    
+    margin-bottom: 20px;                 
+}
+
+.subtitle {
+    font-size: 20px;                     
+    color: #666;                         
+    margin-bottom: 40px;                 
+}
+
+.description {
+    color: #666;                         
+    font-size: 16px;                     
+    line-height: 1.7;                    
+    margin-bottom: 20px;                 
+}
+
+.profile-section {
+    display: flex;                       
+    align-items: center;                 
+}
+
+.profile-card {
+    background: #fff;                    
+    padding: 40px 30px;                  
+    border-radius: 12px;                 
+    text-align: center;                  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    width: 100%;                         
+}
+
+.profile-image {
+    width: 150px;                        
+    height: 150px;                       
+    border-radius: 50%;                  
+    object-fit: cover;                   
+    margin: 0 auto 30px;                 
+    display: block;                      
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+}
+
+.profile-name {
+    font-size: 28px;                     
+    font-weight: 600;                    
+    margin-bottom: 5px;                  
+}
+
+.profile-title {
+    color: #666;                         
+    font-size: 16px;                     
+    margin-bottom: 30px;                 
+}
+
+.social-links {
+    display: flex;                       
+    justify-content: center;             
+    gap: 20px;                           
+}
+
+.social-links a {
+    width: 40px;                         
+    height: 40px;                        
+    background: #f8f9fa;                 
+    border-radius: 50%;                  
+    display: flex;                       
+    align-items: center;                 
+    justify-content: center;             
+    color: #666;                         
+    text-decoration: none;               
+}
+
+.social-links a:hover {
+    background: orange;                 
+    color: #fff;                         
+    transform: translateY(-5px);
+}
+
+/* หน้า Personal */
+.info-box {
+    background: #d0f0ff;                 
+    padding: 20px;                       
+    margin: 20px auto;                   
+    width: 80%;                          
+    text-align: center;                  
+    border-radius: 10px;                 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    font-size: 16px;                     
+    color: #333;                         
+}
+
+.profile-header {
+  text-align: center;          
+  margin-bottom: 40px;         
+  padding: 30px;               
+}
+
+.section-title {
+  font-size: 1.5rem;           
+  color: #2c3e50;              
+  margin-bottom: 20px;         
+  display: flex;               
+  align-items: center;         
+  gap: 10px;                   
+  font-weight: 600;            
+  padding-bottom: 10px;        
+  border-bottom: 2px solid #ff6b35;  
+}
+
+.section-title i {
+  color: #ff6b35;              
+  font-size: 1.3rem;           
+}
+
+.info-cards {
+  display: grid;               
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+  gap: 20px;                   
+  padding: 20px;               
+  text-align: center;          
+}
+
+.card-icon {
+  width: 50px;                 
+  height: 50px;                
+  border-radius: 50%;          
+  background: #ff6b35;         
+  margin: 0 auto 15px;         
+  display: flex;               
+  align-items: center;         
+  justify-content: center;     
+}
+
+.card-icon i {
+  font-size: 1.2rem;           
+  color: white;                
+}
+
+.quote-section {
+  background: #ff6b35;         
+  padding: 30px;               
+  text-align: center;          
+  color: white;                
+}
+
+.quote-section .section-title {
+  color: white;                
+  border-bottom-color: rgba(255, 255, 255, 0.3);  
+}
+
+.quote-section .section-title i {
+  color: rgba(255, 255, 255, 0.8);  
+}
+
+.quote-text {
+  font-size: 1.2rem;           
+  font-style: italic;          
+  margin-bottom: 15px;         
+}
+
+/* ปุ่มกดต่างๆ */
+.btn {
+    display: inline-block;               
+    padding: 12px 24px;                  
+    border-radius: 6px;                  
+    text-decoration: none;               
+    font-weight: 500;                    
+    font-size: 14px;                     
+    border: none;                        
+    cursor: pointer;                     
+    text-align: center;                  
+}
+
+.btn-primary {
+    background: orange;                 
+    color: #fff;                         
+}
+.btn-primary:hover {
+    background: orange;                 
+    transform: translateY(-5px);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #666;
+    border: 2px solid #e9ecef;
+}
+.btn-secondary:hover {
+    color: orange;
+    border-color: orange;
+    transform: translateY(-5px);
+}
+
+.cta-buttons {
+    display: flex;                       
+    gap: 20px;                           
+    margin-bottom: 40px;                 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;              
+        flex-direction: column;           
+        gap: 15px;                       
+    }
+    .nav-menu {
+        gap: 20px;
+        flex-wrap: wrap;                 
+        justify-content: center;         
+    }
+    .main-container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .content-wrapper {
+        grid-template-columns: 1fr;      
+        gap: 40px;
+        text-align: center;              
+    }
+    .profile-card {
+        margin: 20px 0;
+        padding: 30px 20px;
+    }
+    .main-heading {
+        font-size: 42px;                 
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .main-container {
+        padding: 15px;
+    }
+    .main-heading {
+        font-size: 32px;
+    }
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    .profile-name {
+        font-size: 20px;
+    }
+    .cta-buttons {
+        flex-direction: column;          
+        align-items: center;             
+        gap: 15px;
+    }
+    .btn {
+        width: 100%;                     
+        max-width: 200px;                
+    }
+}
+
+
+/* Javascript contact*/ 
+
+.card-contact {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    margin: 80px auto;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: orange; 
+}
+
+textarea {
+    resize: vertical; 
+}
+
+#charCounter {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+#formResult {
+    margin-top: 25px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    display: none; 
+}
+
+.success {
+    background-color: #e8f5e9; 
+    color: #2e7d32; 
+    display: block !important;
+}
+
+.error {
+    background-color: #ffebee; 
+    color: #c62828; 
+    display: block !important;
+}
+
+
+
+/* Javascript ทักทาย*/ 
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 120px 130px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-content p {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}

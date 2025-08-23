@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+
+.enter-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.enter-btn:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+.btn-action {
+    display: flex;
+    position: absolute;
+    right: 10px;
+}
+
+
+button {
+    padding: 6px 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #505050;
+    color: #fff;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #000000;
+    cursor: pointer;
+    /* สีพื้นหลังเมื่อเอาเมาส์ชี้ */
+}
+
+
+/* .open-sound {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    text-align: center;
+}
+
+.close-sound {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+}
+
+.enter-btn2 {
+    color: white;
+    display: inline-block;
+    align-items: flex-end;
+    padding: 5px;
+    background-color: rgba(165, 165, 165, 0.85);
+    border-radius: 10%;
+}
+
+.enter-btn2:hover {
+    cursor: pointer;
+    background-color: rgba(37, 37, 37, 0.85);
+} */

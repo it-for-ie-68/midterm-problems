@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+body {
+    font-family: 'Kanit', Arial, sans-serif;
+     background-image: url('https://s3-matthew-7a-th-public.s3.ap-southeast-7.amazonaws.com/141ff38a-c046-48ba-9fee-ca5ae8bcde5f.jpg');
+  background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #292929;
+    color: #FFD700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.menu a:hover {
+    color: #FFD700;
+}
+.center-title {
+    text-align: center;
+    margin: 48px 0 22px 0;
+    font-size: 2em;
+    color: #C59B37;
+}
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+}
+.each-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 520px;
+    background: #20201e;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px #0001;
+    padding: 22px 18px 16px 18px;
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.video-caption {
+    text-align: center;
+    font-size: 1.07em;
+    color: #c49e21;
+}
+@media (max-width: 650px) {
+    .video-wrapper iframe { width: 96vw; height: 54vw;}
+    .each-video { padding: 10px 4px 12px 4px;}
+}
+.quiz-button-container {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* ปุ่มทำแบบทดสอบสวยๆ */
+.btn-quiz {
+    background-color: #0c0e04; /* สีเขียวสดใส */
+    color: rgb(247, 201, 51);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(102, 96, 17, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-quiz:hover {
+    background-color: #c7e908; /* เข้มขึ้นเมื่อโฮเวอร์ */
+    transform: scale(1.05);
+}

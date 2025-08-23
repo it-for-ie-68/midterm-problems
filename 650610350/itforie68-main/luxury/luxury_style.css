@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0D2B1D;
+    margin: 0;
+    padding: 20px;
+}
+
+.page-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.car-model-header {
+    font-family: 'Gideon Roman';
+    font-size: 50px;
+    font-weight: bolder;
+    color: #EAE0D5;
+    text-shadow: rgba(255, 255, 255, 0.3) 2px 2px 5px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+
+.card {
+    background: #22333B;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    position: absolute;
+    left: 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+
+.model-card-header {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    justify-items: center;
+    text-align: center;
+}
+
+.price-tag {
+    text-align: center;
+    color: gold;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.luxu-image {
+    display: block;
+    margin: auto 10px auto;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Fav */
+
+.card {
+  position: relative; /* ต้องมีเพื่อให้ปุ่ม absolute ทำงาน */
+  /* สไตล์เดิมของคุณ */
+}
+
+.luxury-fav-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 35px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  z-index: 100; /* เพิ่ม z-index ให้สูงขึ้น */
+  padding: 5px;
+  margin: 0;
+}
+
+.luxury-fav-btn:hover,
+.luxury-fav-btn.active {
+  color: red;
+  animation: pulse 0.5s;
+}
+
+
+/* การแจ้งเตือน */
+.favorite-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.favorite-notification.added {
+  background: rgba(76, 175, 80, 0.9);
+}
+
+.favorite-notification.removed {
+  background: rgba(244, 67, 54, 0.9);
+}
+
+.favorite-notification.fade-out {
+  opacity: 0;
+}

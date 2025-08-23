@@ -1,0 +1,229 @@
+/* จัดรูปภาพตรงกลางแนวนอน */
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+
+/* ปรับปรุงส่วน info ให้สวยงามขึ้น */
+.info {
+  padding: 30px; /* เพิ่มระยะขอบใน */
+  border-radius: 20px; /* มุมโค้งมน */
+  margin: 20px; /* ระยะขอบนอก */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เงานุ่มนวล */
+  backdrop-filter: blur(5px); /* เอฟเฟกต์เบลอพื้นหลัง */
+  border: 1px solid rgba(255,255,255,0.3); /* กรอบโปร่งใส */
+}
+
+/* ปรับแต่งหัวข้อ h1 */
+.info h1 {
+  background: linear-gradient(45deg, #901b2d, #b15260); /* ไล่สีในตัวอักษร */
+  -webkit-background-clip: text; /* ตัดพื้นหลังตามตัวอักษร */
+  background-clip: text; /* ตัดพื้นหลังตามตัวอักษร (มาตรฐาน) */
+  -webkit-text-fill-color: transparent; /* ทำให้ตัวอักษรโปร่งใส */
+  font-size: 2.2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+  margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* เงาตัวอักษร */
+} /* เปลี่ยนตัวอักษรที่ชื่อ*/
+
+/* ปรับแต่งย่อหน้า p */
+.info p {
+  font-size: 1.1em; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
+  line-height: 1.6; /* ระยะห่างบรรทัด */
+  color: #333; /* สีตัวอักษรเข้มขึ้น */
+  margin: 10px 0; /* ระยะห่างบนล่าง */
+  padding: 5px 0; /* ระยะขอบใน */
+}
+
+/* เอฟเฟกต์สำหรับปุ่ม YouTube และ Facebook */
+.btnshow a {
+  position: relative; /* ตำแหน่งสัมพัทธ์ */
+  overflow: hidden; /* ซ่อนส่วนที่เกิน */
+  color: white !important; /* สีตัวอักษรสีขาว */
+  text-decoration: none; /* เอาเส้นใต้ออก */
+  font-weight: bold; /* ตัวหนา */
+  text-transform: uppercase; /* ตัวพิมพ์ใหญ่ */
+  letter-spacing: 1px; /* ระยะห่างตัวอักษร */
+}
+
+/* เอฟเฟกต์แสงวิ่งเมื่อ hover */
+.btnshow a::before {
+  content: ''; /* สร้างองค์ประกอบเสมือน */
+  position: absolute; /* ตำแหน่งสัมบูรณ์ */
+  top: 0; /* ชิดด้านบน */
+  left: -100%; /* เริ่มต้นนอกซ้าย */
+  width: 100%; /* ความกว้างเต็ม */
+  height: 100%; /* ความสูงเต็ม */
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); /* แสงไล่สี */
+  transition: left 0.5s; /* การเคลื่อนไหวแสง */
+}
+
+/* เมื่อ hover แสงจะวิ่งผ่าน */
+.btnshow a:hover::before {
+  left: 100%; /* แสงวิ่งไปทางขวา */
+}
+
+/* เอฟเฟกต์เพิ่มเติมสำหรับปุ่ม YouTube */
+.youtube-btn {
+  background: linear-gradient(45deg, #ff0000, #cc0000) !important; /* ไล่สีแดง */
+  transform: perspective(1000px) rotateX(0deg); /* มุมมอง 3D */
+  transition: all 0.3s ease !important; /* การเปลี่ยนแปลง */
+} /*เมื่อเอาเมาท์ชี้ที่ปุ่ม*/
+
+.youtube-btn:hover {
+  background: linear-gradient(45deg, #cc0000, #990000) !important; /* ไล่สีเข้มขึ้น */
+  transform: perspective(1000px) rotateX(-5deg) translateY(-3px) !important; /* หมุนและยกขึ้น */
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3) !important; /* เงาสีแดง */
+} /*เมื่อเอาเมาท์ออกจากปุ่ม*/
+
+/* เอฟเฟกต์เพิ่มเติมสำหรับปุ่ม Facebook */
+.facebook-btn {
+  background: linear-gradient(45deg, #1877F2, #0d5bbf) !important; /* ไล่สีน้ำเงิน */
+  transform: perspective(1000px) rotateX(0deg); /* มุมมอง 3D */
+  transition: all 0.3s ease !important; /* การเปลี่ยนแปลง */
+} /*เมื่อเอาเมาท์ชี้ที่ปุ่ม*/
+
+.facebook-btn:hover {
+  background: linear-gradient(45deg, #0d5bbf, #084d9e) !important; /* ไล่สีเข้มขึ้น */
+  transform: perspective(1000px) rotateX(-5deg) translateY(-3px) !important; /* หมุนและยกขึ้น */
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3) !important; /* เงาสีน้ำเงิน */
+} /*เมื่อเอาเมาท์ออกจากปุ่ม*/
+
+/* เอฟเฟกต์แอนิเมชันสำหรับการโหลดหน้า */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* เริ่มต้นโปร่งใส */
+    transform: translateY(30px); /* เริ่มต้นต่ำกว่า */
+  }
+  to {
+    opacity: 1; /* จบที่ทึบแสง */
+    transform: translateY(0); /* จบที่ตำแหน่งปกติ */
+  }
+}
+
+/* ใช้แอนิเมชันกับส่วน info */
+.info {
+  animation: fadeInUp 0.8s ease-out; /* แอนิเมชันเลื่อนขึ้นและจางเข้า */
+}
+
+/* แอนิเมชันสำหรับปุ่ม */
+.btnshow {
+  animation: fadeInUp 1s ease-out; /* แอนิเมชันช้าที่สุด */
+}
+
+/* เอฟเฟกต์พิเศษเมื่อคลิกปุ่ม */
+.btnshow a:active {
+  transform: scale(0.95) !important; /* หดเล็กลงเมื่อคลิก */
+  transition: transform 0.1s ease !important; /* การเปลี่ยนแปลงเร็ว */
+}
+
+/* เพิ่มเอฟเฟกต์ ripple เมื่อคลิก */
+@keyframes ripple {
+  0% {
+    transform: scale(0); /* เริ่มต้นขนาดเล็ก */
+    opacity: 1; /* ทึบแสง */
+  }
+  100% {
+    transform: scale(4); /* ขยายใหญ่ */
+    opacity: 0; /* จางหายไป */
+  }
+}
+
+/* การใช้งาน ripple effect */
+.btnshow a {
+  position: relative; /* สำหรับการวางตำแหน่ง ripple */
+}
+
+.btnshow a::after {
+  content: ''; /* สร้างองค์ประกอบเสมือน */
+  position: absolute; /* ตำแหน่งสัมบูรณ์ */
+  top: 50%; /* กลางแนวตั้ง */
+  left: 50%; /* กลางแนวนอน */
+  width: 5px; /* ความกว้างเริ่มต้น */
+  height: 5px; /* ความสูงเริ่มต้น */
+  background: rgba(255, 255, 255, 0.5); /* พื้นหลังขาวโปร่งใส */
+  opacity: 0; /* ซ่อนเริ่มต้น */
+  border-radius: 100%; /* ทรงกลม */
+  transform: scale(1) translate(-50%, -50%); /* ตำแหน่งและขนาด */
+  transform-origin: 50% 50%; /* จุดศูนย์กลางการแปลง */
+}
+
+body {
+  animation: bgfade 12s ease-in-out infinite alternate;
+  background: linear-gradient(120deg, #fceabb, #e8eafc, #d4fcf9, #f9e7fe, #b5fffc, #e0c3fc, #f5f7fa , #ffecd2, #fbc2eb, #d9afd9, #b5fffc);
+  background-size: 400% 400%;
+}
+
+@keyframes bgfade { /* แอนิเมชันเปลี่ยนสีพื้นหัลง */
+  0% {
+    background-position: 0% 50%;
+  }
+  33% {
+    background-position: 50% 100%;
+  }
+  66% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.message-box {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #DDD5F3; 
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.message-box h2 {
+  font-size: 1.4em;
+  color: #FF6962;
+  margin-bottom: 10px;
+}
+
+.message-box h1 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message-box input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.message-box button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #FCCF55;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-box button:hover {
+  background-color: #76BC43;
+}
+
+#displayArea {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #444;
+}
+

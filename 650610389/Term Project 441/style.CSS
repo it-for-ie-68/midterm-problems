@@ -1,0 +1,124 @@
+:root {
+  --clr-primary: #0077b6;
+  --clr-light: #f6fafe;
+  --clr-dark: #012a4a;
+  --gap: 2.0rem;
+  --radius: 25px;
+  --shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+  font-family: "Prompt", sans-serif;
+  line-height: 1.5;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+/* ---------- Layout styles ---------- */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 30px 10px
+}
+
+.site-header h1 {
+  margin: 0 0 5px;
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 40px);
+  color: var(--clr-primary);
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  gap: var(--gap);
+  padding: var(--gap);
+  
+  /* 3‑COLUMN (≥ 960 px) */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+}
+
+.card-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 23px;
+  color: var(--clr-primary);
+}
+
+.card-content p {
+  flex: 1;
+  margin: 0 0 25px;
+}
+
+.btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: var(--clr-primary);
+  color: #fff;
+  border-radius: calc(var(--radius) / 2);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #150274;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+
+/* 2‑COLUMN ( 600 px – 959 px ) */
+@media (max-width: 959px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1‑COLUMN (≤ 599 px) */
+@media (max-width: 599px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 30px 20px;
+  }
+}
+

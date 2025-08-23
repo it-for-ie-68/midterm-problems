@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายละเอียดร้านอาหาร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* คำอธิบายอยู่ตรงกลาง */
+    h1, h2 { text-align: center; margin: 20px 0 10px; }
+    main { padding: 0 30px 40px; max-width: 900px; margin: auto; }
+    p { line-height: 1.6; }
+    footer { text-align: center; padding: 20px 0 40px; font-size: 17px; }
+
+    body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+    /* พื้นหลังแบบจาง ๆ */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.wongnai.com/p/1920x0/2024/11/18/84dfce3ebeae45fa955a67fff558bd39.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* ปรับความจาง */
+    z-index: -1;
+  }
+
+  .site-header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>รายละเอียดร้าน</h1>
+  </header>
+
+  <main class="detail">
+
+    <section class="image-row">
+      <img src="https://img.wongnai.com/p/256x256/2025/01/04/1ad5161a584d4a959ecc07e8b969845a.jpg" style="width: 100%; max-width: 400px;">
+      <img src="https://img.wongnai.com/p/256x256/2025/02/27/481f1cee3a07407c99f0ffd738fb885e.jpg" style="width: 100%; max-width: 500px;">
+      <img src="https://img.wongnai.com/p/256x256/2025/02/27/a76167c3b7cb42d7ad7712539e1fb84b.jpg" style="width: 100%; max-width: 280px;"> 
+    </section>
+    
+      <h2>ทับปิง</h2>
+      <p>ร้านอาหารอันเปี่ยมไปด้วยเสน่ห์แห่งนี้ตั้งอยู่ริมแม่น้ำปิง ผสมผสานการออกแบบแบบดั้งเดิมและทันสมัยได้อย่างลงตัว
+เป็นการนำวัตถุดิบไทยมาผสมผสานกับเทคนิคการทำอาหารแบบยุโรปได้อย่างลงตัว ลองชิม เพนเนแหนมเพสโต และ แกงเผ็ดขาเป็ดตุ๋นทอดกรอบ เพื่อประสบการณ์ที่ดีที่สุด แนะนำให้เลือกนั่งที่ระเบียงริมแม่น้ำและดื่มด่ำกับวิวสวย ๆ </p>
+      <p><strong>ที่อยู่ :</strong> 4/9 ม.3 ต.ป่าแดด อ.เมืองเชียงใหม่, Chiang Mai, 50100, ประเทศไทย</p>
+      <p><strong>เปิดบริการ :</strong> ทุกวัน เวลา 10:00 - 22:00 น. </p>
+    </section>
+    
+     <!-- ปุ่มแชร์ -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="share-fb" style="padding: 10px 20px; margin: 5px; background: #3b5998; color: white; border: none; border-radius: 5px; cursor: pointer;">📘 แชร์ไป Facebook</button>
+  <button id="copy-link" style="padding: 10px 20px; margin: 5px; background: #555; color: white; border: none; border-radius: 5px; cursor: pointer;">🔗 คัดลอกลิงก์</button>
+</div>
+
+<script>
+  const pageUrl = window.location.href;
+  const pageTitle = document.querySelector("h2").innerText;
+
+  // แชร์ไป Facebook
+  document.getElementById("share-fb").addEventListener("click", () => {
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    window.open(fbUrl, "_blank", "width=600,height=400");
+  });
+
+  // คัดลอกลิงก์
+  document.getElementById("copy-link").addEventListener("click", () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      alert("คัดลอกลิงก์แล้ว!");
+    });
+  });
+</script>
+    </main>
+
+  <footer class="site-footer">
+    <a href="index.html">← กลับหน้าแรก</a><br>
+    Michelin Guide Chiang Mai
+  </footer>
+
+</body>
+</html>

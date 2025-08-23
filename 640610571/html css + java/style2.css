@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+  background-color: #3b060e;     /* สีพื้นหลัง */
+  color: white;                  /* สีตัวอักษร */
+  padding: 10px 20px;            /* ขนาดขอบใน */
+  text-decoration: none;         /* เอาเส้นใต้ลิงก์ออก */
+  border-radius: 8px;            /* มุมโค้งมน */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* เงา */
+  transition: background-color 0.3s, transform 0.2s;
+  
+}
+
+.btn:hover {
+  background-color: #b15260;     /* สีเมื่อชี้เมาส์ */
+  transform: translateY(-2px);   /* ขยับขึ้นนิดหน่อย */
+}
+
+.tab {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: #901b2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  /*justify-content: center;  ตรงกลางแนวตั้ง (เฉพาะถ้าใช้ full-height) */
+}
+

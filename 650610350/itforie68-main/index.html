@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rev & Royal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="search.js" defer></script>
+  </head>
+  <body>
+    <div class="top-menu">
+      <div class="name">
+        <span>Car Catalog</span>
+      </div>
+      <div class="menu-items">
+        <span><a href="index.html">🏠 Home</a></span>
+        <span><a href="favorites.html">❤️ Favorites</a></span>
+        <span id="searchIcon" style="cursor: pointer; font-size: 1.3em">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search cars..." />
+      </div>
+    </div>
+    <div id="slideshow" class="slideshow">
+      <button id="prevSlide" class="slide-btn">&#8592;</button>
+      <img id="slideImage" src="" alt="Slideshow" />
+      <button id="nextSlide" class="slide-btn">&#8594;</button>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-header">
+          <h2>Hyper Car</h2>
+        </div>
+        <div>
+          <div class="logo-row">
+            <img src="logo/ferrari.png" alt="ferrari logo" class="logo" />
+            <span> <a href="hyper/ferrari.html"> Ferrari</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/lambo.png" alt="lamborghini logo" class="logo" />
+            <span> <a href="hyper/lamborghini.html">Lamborghini</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/mc.png" alt="mclaren logo" class="logo" />
+            <span> <a href="hyper/mclaren.html">Mclaren</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/bugatti.png" alt="bugatti logo" class="logo" />
+            <span><a href="hyper/bugatti.html">Bugatti</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/koenigsegg.png" alt="koenigsegg logo" class="logo" />
+            <span><a href="hyper/konigsegg.html">Koenigsegg</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Luxury Car</h2>
+        </div>
+        <div>
+          <div class="logo-row">
+            <img src="logo/bmw.png" alt="bmw logo" class="logo" />
+            <span> <a href="luxury/bmw.html">BMW</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/benz.png" alt="ben z logo" class="logo" />
+            <span><a href="luxury/mb.html">Mercedes-Maybach</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/audi.png" alt="audi logo" class="logo" />
+            <span><a href="luxury/audi.html">Audi</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/bentley.png" alt="bentley logo" class="logo" />
+            <span><a href="luxury/bently.html">Bentley</a></span>
+          </div>
+          <div class="logo-row">
+            <img src="logo/rr.png" alt="rolls royce logo" class="logo" />
+            <span><a href="luxury/rr.html">Rolls Royce</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายละเอียดร้านอาหาร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   
+    .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* คำอธิบายอยู่ตรงกลาง */
+    h1, h2 { text-align: center; margin: 20px 0 10px; }
+    main { padding: 0 30px 40px; max-width: 900px; margin: auto; }
+    p { line-height: 1.6; }
+    footer { text-align: center; padding: 20px 0 40px; font-size: 17px; }
+
+    body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+    /* พื้นหลังแบบจาง ๆ */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://kindeeyunuea.com/wp-content/uploads/2022/08/GONieng-4.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* ปรับความจาง */
+    z-index: -1;
+  }
+
+  .site-header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>รายละเอียดร้าน</h1>
+  </header>
+
+  <main class="detail">
+
+    <section class="image-row">
+      <img src="https://img.wongnai.com/p/256x256/2024/10/18/9d8ccd52866e432a9e4819784e1c1777.jpg" style="width: 100%; max-width: 400px;">
+      <img src="https://img.wongnai.com/p/256x256/2022/01/09/5b33d1ebfd674829a61e9ac2f2065763.jpg" style="width: 100%; max-width: 500px;">
+      <img src="https://img.wongnai.com/p/256x256/2022/01/09/f79dbb715751463b9045a9d46067e114.jpg" style="width: 100%; max-width: 400px;"> 
+    </section>
+    
+      <h2>โกเหน่ง</h2>
+      <p>มาถึงเชียงใหม่ทั้งทีก็ต้องแวะมาร้านโกเหน่ง ปาท่องโก๋ ที่เปิดบริการมาแล้วเกือบ 40 ปี มีจุดขายที่ปาท่องโก๋รูปสัตว์น่ารัก ๆ ทั้งจระเข้ ไดโนเสาร์ มังกร และช้าง ปาท่องโก๋ด้านนอกกรอบด้านในนุ่ม ทางร้านยังมีโจ๊กและเครื่องดื่มต่าง ๆ ไว้คอยให้บริการ เป็นขวัญใจนักท่องเที่ยวที่ผ่านไปใครก็ต้องมาแวะ  </p>
+      <p><strong>ที่อยู่ :</strong> 77 ถ.วิชยานนท์ ต.ช้างม่อย อ.เมืองเชียงใหม่, Chiang Mai, 50300, ประเทศไทย</p>
+      <p><strong>เปิดบริการ :</strong> ทุกวัน เวลา 06:00 - 12:00 น. และ 13:00 - 16:00 น.</p>
+    </section>
+    
+     <!-- ปุ่มแชร์ -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="share-fb" style="padding: 10px 20px; margin: 5px; background: #3b5998; color: white; border: none; border-radius: 5px; cursor: pointer;">📘 แชร์ไป Facebook</button>
+  <button id="copy-link" style="padding: 10px 20px; margin: 5px; background: #555; color: white; border: none; border-radius: 5px; cursor: pointer;">🔗 คัดลอกลิงก์</button>
+</div>
+
+<script>
+  const pageUrl = window.location.href;
+  const pageTitle = document.querySelector("h2").innerText;
+
+  // แชร์ไป Facebook
+  document.getElementById("share-fb").addEventListener("click", () => {
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    window.open(fbUrl, "_blank", "width=600,height=400");
+  });
+
+  // คัดลอกลิงก์
+  document.getElementById("copy-link").addEventListener("click", () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      alert("คัดลอกลิงก์แล้ว!");
+    });
+  });
+</script>
+    </main>
+
+  <footer class="site-footer">
+    <a href="index.html">← กลับหน้าแรก</a><br>
+    Michelin Guide Chiang Mai
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* Body & Background */
+body {
+  font-family: Arial, sans-serif;
+  background: #1e272e;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+
+/* Header */
+.catalog-header {
+  text-align: center;
+  color: yellow;
+  font-size: 40px;
+  text-shadow: #1e272e 4px 4px 10px;
+}
+
+/* Card Container Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive grid on small screens */
+@media (max-width: 700px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Top menu bar */
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+/* Menu Items */
+.menu-items {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Search Input */
+.menu-items input[type="text"] {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: width 0.3s ease;
+  width: 180px;
+  background: #fafafa;
+  color: #333;
+}
+
+.menu-items input[type="text"]:focus {
+  width: 240px;
+  box-shadow: 0 0 8px #f1c40f;
+  border-color: #f1c40f;
+}
+
+/* Site Name */
+.name {
+  color: yellow;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 4px 4px 10px #1e272e;
+}
+
+/* Menu links and spans */
+.menu-items span,
+.menu-items a {
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-items a:hover,
+.menu-items span:hover {
+  color: #f1c40f;
+}

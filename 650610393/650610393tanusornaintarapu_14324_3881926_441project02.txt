@@ -1,0 +1,3 @@
+ลิ้งที่ Deploy บน Netlify      jamesgunnfcvol2.netlify.app
+
+ลิ้งไปหา VDO ที่อธิบาย Code      https://youtu.be/MFrRNSltsvo?si=XOOsepWMXpoag0Rm

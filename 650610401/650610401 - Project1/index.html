@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>หน้าแรก</title>
+  <style>
+    #changeColor {
+      padding: 10px;
+      background-color: lightblue;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome</h1>
+
+  <!-- ปุ่มคลิก -->
+  <button id="clickBtn">คลิกที่นี่</button>
+
+  <!-- กล่องข้อความพิมพ์ -->
+  <input type="text" id="textInput" placeholder="พิมพ์ข้อความ...">
+  <p id="displayText"></p>
+
+  <!-- กล่องเปลี่ยนสี -->
+  <div id="changeColor">เลื่อนเมาส์มาที่นี่</div>
+
+  <script>
+    // ตอบสนองเมื่อ Click
+    document.getElementById("clickBtn").addEventListener("click", function(){
+      alert("คุณคลิกปุ่มแล้ว!");
+    });
+
+    // ตอบสนองเมื่อพิมพ์
+    document.getElementById("textInput").addEventListener("input", function(){
+      document.getElementById("displayText").textContent = "คุณพิมพ์: " + this.value;
+    });
+
+    // ตอบสนองเมื่อเลื่อนเมาส์
+    document.getElementById("changeColor").addEventListener("mouseover", function(){
+      this.style.backgroundColor = "yellow";
+    });
+    document.getElementById("changeColor").addEventListener("mouseout", function(){
+      this.style.backgroundColor = "lightblue";
+    });
+  </script>
+</body>
+</html>

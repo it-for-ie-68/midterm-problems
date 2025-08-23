@@ -1,0 +1,6 @@
+ลิ้งที่ Deploy บน Netlify
+https://starlit-kelpie-5fbebc.netlify.app/
+
+
+ลิ้งไปหา VDO ที่อธิบาย Code ว่าทำอะไร
+https://drive.google.com/file/d/1FoWCptOyIhYwWdb1umnVzoLosQQe2vvE/view?usp=sharing

@@ -1,0 +1,9 @@
+ไฟล์ java script.txt
+ลิงก์ที่ Deploy บน Netlify
+https://scintillating-lolly-a7d56d.netlify.app/
+
+ลิงก์ VDO ที่อธิบาย Code 
+https://drive.google.com/drive/folders/1aMV6KmnvmzE4IOiizQMqW8Z1I3I1as56?usp=sharing
+
+G06  ชนันรัตน์ นกอินทร์  650610367		
+     ชุตินันท์  สำพะโว   650610375

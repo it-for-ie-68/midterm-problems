@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> HOME </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="about2.html">ABOUT ME</a></li>
+          <li><a href="Personal2.html">MY PERSONAL</a></li>
+          <li><a href="contact2.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="card-contact">
+      <h1>Let' talk ✉️</h1>
+      <p>หากมีข้อสงสัยหรือต้องการติดต่อ สามารถกรอกฟอร์มด้านล่างได้เลย</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            placeholder="ชื่อจริง"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            placeholder="นามสกุล"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="อีเมลของคุณ"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="หัวข้อเรื่อง"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="พิมพ์ข้อความที่นี่..."
+          ></textarea>
+          <small id="charCounter">250 ตัวอักษรที่เหลือ</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+      </form>
+
+      <div id="formResult" style="display: none"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contactForm = document.getElementById("contactForm");
+        const messageInput = document.getElementById("message");
+        const charCounter = document.getElementById("charCounter");
+        const formResult = document.getElementById("formResult");
+        const MAX_CHARS = 250;
+
+        // ✅ 1. การตอบสนองต่อการพิมพ์ (Typing Interaction)
+        messageInput.addEventListener("input", () => {
+          const remaining = MAX_CHARS - messageInput.value.length;
+          charCounter.textContent = `${remaining} ตัวอักษรที่เหลือ`;
+
+          if (remaining < 0) {
+            charCounter.style.color = "red";
+          } else if (remaining < 25) {
+            charCounter.style.color = "#ff8c00"; // DarkOrange
+          } else {
+            charCounter.style.color = "#999"; // สีเทา
+          }
+        });
+
+        // ✅ 2. การตอบสนองต่อการคลิก (Click/Submit) และ ✅ 3. การตอบสนองอื่นๆ (Form Validation)
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          // ดึงค่าจากทุกช่อง
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = messageInput.value.trim();
+
+          // ซ่อนและรีเซ็ตผลลัพธ์เก่า
+          formResult.style.display = "block"; // ทำให้ div แสดงผล
+          formResult.className = ""; // ล้าง class เก่า (success/error)
+
+          // ตรวจสอบข้อมูล (Validation) - อัปเดตเงื่อนไข
+          if (
+            firstName === "" ||
+            lastName === "" ||
+            email === "" ||
+            message === ""
+          ) {
+            formResult.textContent =
+              "❗ กรุณากรอกข้อมูลในช่องที่มีเครื่องหมาย * ให้ครบถ้วน";
+            formResult.className = "formResult error";
+          } else if (message.length > MAX_CHARS) {
+            formResult.textContent = `❗ ข้อความยาวเกิน ${MAX_CHARS} ตัวอักษร`;
+            formResult.className = "formResult error";
+          } else {
+            // หากข้อมูลครบถ้วน
+            formResult.textContent = `✅ ขอบคุณ คุณ ${firstName}! ข้อความของคุณถูกส่งเรียบร้อยแล้ว`;
+            formResult.className = "formResult success";
+
+            // ล้างค่าในฟอร์ม
+            contactForm.reset();
+
+            // Reset ตัวนับตัวอักษร
+            charCounter.textContent = `${MAX_CHARS} ตัวอักษรที่เหลือ`;
+            charCounter.style.color = "#999";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

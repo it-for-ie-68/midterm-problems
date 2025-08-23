@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายละเอียดร้านอาหาร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   
+    .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* คำอธิบายอยู่ตรงกลาง */
+    h1, h2 { text-align: center; margin: 20px 0 10px; }
+    main { padding: 0 30px 40px; max-width: 900px; margin: auto; }
+    p { line-height: 1.6; }
+    footer { text-align: center; padding: 20px 0 40px; font-size: 17px; }
+
+    body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+    /* พื้นหลังแบบจาง ๆ */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.wongnai.com/p/1920x0/2023/09/07/f41325e7eec645189fdba87600cc7a26.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* ปรับความจาง */
+    z-index: -1;
+  }
+
+  .site-header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>รายละเอียดร้าน</h1>
+  </header>
+
+  <main class="detail">
+
+    <section class="image-row">
+      <img src="https://img.wongnai.com/p/256x256/2023/10/30/ca353857118546849e392dc70a924b30.jpg" style="width: 100%; max-width: 400px;">
+      <img src="https://img.wongnai.com/p/256x256/2023/01/16/5d09b937ee7d4c3fa17b6a7cf87f3bcb.jpg" style="width: 100%; max-width: 500px;">
+      <img src="https://img.wongnai.com/p/1920x0/2020/09/11/dbd3ce9948714050885511cd81efed38.jpg" style="width: 100%; max-width: 280px;"> 
+    </section>
+   
+      <h2>เสน่ห์</h2>
+      <p>ร้านอาหารฮาลานยอดฮิตของเมืองเชียงใหม่ บรรยากาศสบาย ๆ ริมแม่น้ำปิง ภายในร้านตกแต่งสไตล์ไทยของ 4 ภาค ทางร้านตั้งใจใส่รายละเอียดเพื่อโชว์ความสวยงามของบ้านเรา เมนูเนื้อของที่นี่ปรุงรสอย่างดี รสชาติกลมกล่อม จานเด็ดที่ต้องสั่งคือข้าวมันเนื้อ ข้าวหุงอย่างดีกับเนื้อวัวติดมัน โปะด้วยเนื้อย่างสไลซ์และไข่แดง หอมกลิ่นเนื้อเต็ม ๆ คำ </p>
+      <p><strong>ที่อยู่ :</strong> 62 ถ.วังสิงห์คำ ต.ป่าตัน อ.เมืองเชียงใหม่, Chiang Mai, 50300, ประเทศไทย</p>
+      <p><strong>เปิดบริการ :</strong> สาขาวังสิงห์คำ 08:00 - 15:00 น. (หยุดทุกวันพฤหัสบดี) , สาขาสามกษัตริย์ 11:00 - 20.00 น. (หยุดทุกวันพุธ)</p>
+    </section>
+    
+     <!-- ปุ่มแชร์ -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="share-fb" style="padding: 10px 20px; margin: 5px; background: #3b5998; color: white; border: none; border-radius: 5px; cursor: pointer;">📘 แชร์ไป Facebook</button>
+  <button id="copy-link" style="padding: 10px 20px; margin: 5px; background: #555; color: white; border: none; border-radius: 5px; cursor: pointer;">🔗 คัดลอกลิงก์</button>
+</div>
+
+<script>
+  const pageUrl = window.location.href;
+  const pageTitle = document.querySelector("h2").innerText;
+
+  // แชร์ไป Facebook
+  document.getElementById("share-fb").addEventListener("click", () => {
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    window.open(fbUrl, "_blank", "width=600,height=400");
+  });
+
+  // คัดลอกลิงก์
+  document.getElementById("copy-link").addEventListener("click", () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      alert("คัดลอกลิงก์แล้ว!");
+    });
+  });
+</script>
+    </main>
+
+  <footer class="site-footer">
+    <a href="index.html">← กลับหน้าแรก</a><br>
+    Michelin Guide Chiang Mai
+  </footer>
+
+</body>
+</html>

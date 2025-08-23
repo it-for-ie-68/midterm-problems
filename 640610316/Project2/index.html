@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2: Website with Interactivity G16</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1>Welcome To My Page</h1>
+    <nav>
+       <a href="index.html">Home</a>
+       <a href="about.html">About Me</a>
+    </nav>
+</header>
+  <main>
+    <img 
+      src="https://tse2.mm.bing.net/th/id/OIP.th8XrHNRa8CQItjxLlO1ZQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" 
+      alt="คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมอุตสาหการ มหาวิทยาลัยเชียงใหม่" 
+      width="500px"
+      class="profile">
+    <h2>Website นี้เป็นส่วนหนึ่งของวิชา 255441 </h2>
+    <h2>Assignment 1 </h2>
+    <p>1. นาย ทยากร ประทุมพิทักษ์ 640610314 </p>
+    <p>2. นาย ธนกฤต ศรีสุวรรณ    640610316 </p>
+    <p>เว็บไซต์นี้เป็นเว็บไซต์สำหรับแสดงข้อมูลของนักศึกษาายในกลุ่มโดยสร้างจาก html และ css </p>
+    <p>เสนอ </p>
+    <p>ผู้ช่วยศาสตราจารย์ ดร.นิรันดร์ พิสุทธอานนท์ </p>
+    <button id="changeColorBtn">เปลี่ยนสีพื้นหลัง</button>
+
+  </style>
+</head>
+<body>
+
+  <h2>แสดงความคิดเห็น</h2>
+  <input type="text" id="feedbackInput" placeholder="พิมพ์ความคิดเห็นของคุณ">
+  <button id="submitFeedback">ส่งความคิดเห็น</button>
+
+  <div id="comments"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const submitBtn = document.getElementById('submitFeedback');
+      const feedbackInput = document.getElementById('feedbackInput');
+      const commentsDiv = document.getElementById('comments');
+
+      submitBtn.addEventListener('click', () => {
+        const feedback = feedbackInput.value.trim();
+        if (feedback) {
+          const comment = document.createElement('div');
+          comment.classList.add('comment');
+          comment.textContent = feedback;
+          commentsDiv.prepend(comment);
+          feedbackInput.value = '';
+        } else {
+          alert('กรุณาพิมพ์ข้อความก่อนส่ง');
+        }
+      });
+    });
+  </script>  <script src="script.js"></script>
+
+</body>
+</html>

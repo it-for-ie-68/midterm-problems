@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายละเอียดร้านอาหาร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* คำอธิบายอยู่ตรงกลาง */
+    h1, h2 { text-align: center; margin: 20px 0 10px; }
+    main { padding: 0 30px 40px; max-width: 900px; margin: auto; }
+    p { line-height: 1.6; }
+    footer { text-align: center; padding: 20px 0 40px; font-size: 17px; }
+
+    body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+    /* พื้นหลังแบบจาง ๆ */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipPCBxcRNlxrYzzPi_eKYLG5D6vQkI_zAh1I7fI-=s1360-w1360-h1020-rw');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* ปรับความจาง */
+    z-index: -1;
+  }
+
+  .site-header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>รายละเอียดร้าน</h1>
+  </header>
+
+  <main class="detail">
+
+    <section class="image-row">
+      <img src="https://img.wongnai.com/p/1920x0/2023/03/06/6813db641c3c483cad21938cec7c8ee3.jpg" style="width: 100%; max-width: 280px;">
+      <img src="https://img.wongnai.com/p/1920x0/2023/01/02/0e0b00ee88924cdbacacf12495ab4810.jpg" style="width: 100%; max-width: 300px;">
+      <img src="https://img.wongnai.com/p/1920x0/2024/03/03/4ed11c9234784eb894427df05228e8c8.jpg" style="width: 100%; max-width: 280px;"> 
+    </section>
+    
+      <h2>เอกฉันท์</h2>
+      <p>ร้านอาหารไทยร้านนี้มีบริการเพียง 5 โต๊ะเท่านั้น ส่วนคอนเซปต์ร้านคือ Slow Food หรืออาหารท้องถิ่นสดใหม่ที่ใช้วัตถุดิบจากจากชุมชนและภูมิปัญญาอาหารไทยพื้นบ้าน เมนูไทยของเอกฉันท์มีหลากหลาย เช่น แกงรัญจวนหมูและเนื้อ เมนูพื้นถิ่นที่น่าสนใจ เช่น ผัดห่อวอ นอกจากนี้ยังมีอาหาร 4 ภาค รวมทั้งอาหารทะเล นำเสนอในเวอร์ชั่นของน้องเอก เช่น ยำส้มโอเมี่ยงปู </p>
+      <p><strong>ที่อยู่ :</strong> 95 ต.ช้างคลาน อ.เมืองเชียงใหม่, Chiang Mai, 50100, ประเทศไทย</p>
+      <p><strong>เปิดบริการ :</strong> ทุกวัน เวลา 11:00 - 14:30 น. และ 17:00 - 21:30 น.</p>
+    </section>
+
+     <!-- ปุ่มแชร์ -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="share-fb" style="padding: 10px 20px; margin: 5px; background: #3b5998; color: white; border: none; border-radius: 5px; cursor: pointer;">📘 แชร์ไป Facebook</button>
+  <button id="copy-link" style="padding: 10px 20px; margin: 5px; background: #555; color: white; border: none; border-radius: 5px; cursor: pointer;">🔗 คัดลอกลิงก์</button>
+</div>
+
+<script>
+  const pageUrl = window.location.href;
+  const pageTitle = document.querySelector("h2").innerText;
+
+  // แชร์ไป Facebook
+  document.getElementById("share-fb").addEventListener("click", () => {
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    window.open(fbUrl, "_blank", "width=600,height=400");
+  });
+
+  // คัดลอกลิงก์
+  document.getElementById("copy-link").addEventListener("click", () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      alert("คัดลอกลิงก์แล้ว!");
+    });
+  });
+</script>
+    </main>
+
+  <footer class="site-footer">
+    <a href="index.html">← กลับหน้าแรก</a><br>
+    Michelin Guide Chiang Mai
+  </footer>
+  
+</body>
+</html>

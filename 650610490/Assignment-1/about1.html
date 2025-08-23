@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Person 1</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> HOME </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="about1.html">ABOUT ME</a></li>
+          <li><a href="Personal1.html">MY PERSONAL</a></li>
+          <li><a href="contact1.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="content-wrapper">
+        <div class="profile-section">
+          <div class="profile-card">
+            <img
+              src="images/person1.jpg"
+              alt="Nanthacha Boonphadung"
+              class="profile-image"
+            />
+
+            <h2 class="profile-name">Nanthacha Boonphadung</h2>
+
+            <p class="profile-title">
+              4rd-year student, Industrial Engineering <br />
+              @Chiang Mai University
+            </p>
+
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1ABXTnAe3Q/?mibextid=wwXIfr"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ice_nanthacha?igsh=MTNveDAzeTIybGkxcw=="
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://line.me/ti/p/9mEUz4CfF9" target="_blank">
+                <i class="fab fa-line"></i>
+              </a>
+              <a href="https://x.com/" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h1 class="main-heading">Hello</h1>
+
+          <p class="subtitle">Here's who I am & what I do</p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://drive.google.com/file/d/1135Mlv7dDnlWVHb7_Z2d1DWH90TSbMnn/view?usp=sharing"
+              target="_blank"
+              class="btn btn-primary"
+              >Resume</a
+            >
+            <a
+              href="https://drive.google.com/file/d/1FK5FlG--bJXi7DEKcJQb0OCI8lgXNtKk/view?usp=sharing"
+              target="_blank"
+              class="btn btn-secondary"
+              >Projects</a
+            >
+          </div>
+
+          <p class="description">
+            ยินดีต้อนรับเข้าสู่อาณาจักรของฉัน! 🎀
+            ที่นี่คือเว็บของนักศึกษาวิศวกรรมอุตสาหการชั้นปีปี 4
+            ผู้เสพชาไข่มุกเป็นชีวิตจิตใจ และเปิดเพลงวนจนเพื่อนรำคาญ
+            งานอดิเรกคือหาของกินใหม่ๆ และหากุญแจห้องที่ชอบหายเป็นประจำ
+          </p>
+          <p class="description">
+            เดินชมโปรเจกต์หรือจะเข้ามาทักทายก็ได้หมด ถ้าอยากคุยเรื่องมุกตลก
+            ร้านคาเฟ่ในเชียงใหม่ หรือเรื่องไร้สาระอื่นๆ DM มาได้ตลอดเลยนะคะ 💬✨
+          </p>
+
+          <div class="greeting-container">
+            <h3>ทักทายกันหน่อย!</h3>
+            <form id="greetingForm">
+              <input
+                type="text"
+                id="visitorNameInput"
+                placeholder="ใส่ชื่อเล่นของคุณ..."
+                required
+              />
+              <button type="submit" class="btn btn-secondary">ทักทาย!</button>
+            </form>
+            <p id="liveNamePreview" style="margin-top: 20px"></p>
+          </div>
+
+          <div id="greetingModal" class="modal-overlay">
+            <div class="modal-content">
+              <p id="modalMessage"></p>
+              <button id="closeModalBtn" class="btn btn-primary">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const nameInput = document.getElementById("visitorNameInput");
+      const livePreview = document.getElementById("liveNamePreview");
+
+      nameInput.addEventListener("input", () => {
+        if (nameInput.value) {
+          livePreview.textContent = ` ${nameInput.value} ลองกดปุ่ม "ทักทาย!" ดูสิ ><`;
+        } else {
+          livePreview.textContent = "";
+        }
+      });
+
+      const greetingForm = document.getElementById("greetingForm");
+      const modal = document.getElementById("greetingModal");
+      const modalMessage = document.getElementById("modalMessage");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+
+      greetingForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const visitorName = nameInput.value;
+        const emojis = ["👋", "😊", "🎉", "✨"];
+        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+        modalMessage.innerHTML = `รับพลังบวกไปเลย <strong>${visitorName}</strong> ${randomEmoji} ยินดีต้อนรับนะ`;
+        modal.style.display = "flex";
+      });
+
+      closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        greetingForm.reset();
+        livePreview.textContent = "";
+      });
+    </script>
+  </body>
+</html>

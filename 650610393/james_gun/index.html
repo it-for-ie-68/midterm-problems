@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Gunn</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_down_alt" />
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="/assets/css/btn-sound.css" />
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay loop muted class="bg-video" id="myVideo">
+            <!-- get video upload on GitHub for stable loading -->
+            <source src="https://cdn.jsdelivr.net/gh/tanusorn/vide_flie/superman-bts.mp4" type="video/mp4" />
+        </video>
+
+        <div class="overlay">
+            <a href="/pages/index2.html" class="enter-btn">เข้าสู่เว็บไซต์</a>
+        </div>
+        <div class="btn-action">
+            <button id="btnMutetoggle" aria-label="Toggle sound"><svg xmlns="http://www.w3.org/2000/svg" height="18px"
+                    viewBox="0 -960 960 960" width="18px" fill="#e3e3e3">
+                    <path
+                        d="m616-320-56-56 104-104-104-104 56-56 104 104 104-104 56 56-104 104 104 104-56 56-104-104-104 104Zm-496-40v-240h160l200-200v640L280-360H120Zm280-246-86 86H200v80h114l86 86v-252ZM300-480Z" />
+                </svg></button>
+            <!-- <div class="open-sound"><button onclick="document.getElementById('myVideo').muted = false;"
+                    class="open-sound-btn">เปิดเสียง</button>
+            </div>
+            <div class="close-sound"><button onclick="document.getElementById('myVideo').muted = false;"
+                    class="close-sound-btn">เปิดเสียง</button>
+            </div> -->
+        </div>
+
+
+
+    </div>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/soud.js"></script>
+</body>
+
+</html>

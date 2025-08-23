@@ -1,0 +1,15 @@
+Project2- Interactivity IT for IE
+ธวัลรัตน์ เสนะสุทธิพันธุ์ รหัส650610401 sec001
+
+	•	** หนู Deploy ไฟล์บน Netlify แล้วหน้าเว็บไม่ขึ้นตามที่เขียนใน VS code ค่ะ พยายามแก้แล้วแต่ก็ไม่ได้
+ขออนุญาตส่งเป็นไฟล์ Zip ใน Assignment แทนนะคะ **
+	
+
+	•	ลิ้งไปหา VDO อธิบาย Code บน Google Drive
+https://drive.google.com/file/d/18AqYMNoy-t21pMSolBZA2PWIydQflyJv/view
+
+https://drive.google.com/file/d/1P-k9FLa_L_cvA7CtACqTieJooKsVW0aT/view?usp=sharing
+
+
+
+		

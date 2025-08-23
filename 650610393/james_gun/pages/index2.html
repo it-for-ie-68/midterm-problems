@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Gunn - Visionary Director</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">James Gunn</a>
+            <ul class="nav-menu" id="Mymenu">
+                <li class="nav-item"><a id="nav-home" href="/pages/index2.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a id="nav-about" href="/pages/about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a id="nav-works" href="/pages/works.html" class="nav-link">Works</a></li>
+                <li class="nav-item"><a id="nav-play" href="/pages/role.html" class="nav-link">Play mini game</a></li>
+                <!-- Change lange -->
+                <div class="lang-switch">
+                    <span onclick="changeLanguage('th')">TH</span> |
+                    <span onclick="changeLanguage('en')">ENG</span>
+                </div>
+            </ul>
+            <!-- ham-bar -->
+            <div class="ham-menu" onclick="toggleHam(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- dark-light mode -->
+    <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+                d="M600-640 480-760l120-120 120 120-120 120Zm200 120-80-80 80-80 80 80-80 80ZM483-80q-84 0-157.5-32t-128-86.5Q143-253 111-326.5T79-484q0-146 93-257.5T409-880q-18 99 11 193.5T520-521q71 71 165.5 100T879-410q-26 144-138 237T483-80Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+                d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+        </svg>
+    </button>
+
+    <!-- <div class="lang-switch">
+        <button onclick="changeLanguage('en')">EN</button>
+        <button onclick="changeLanguage('th')">TH</button>
+    </div> -->
+
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="index-section">
+            <div class="index-wrapper">
+                <img src="/assets/img/james-gunn-800x800.jpg" alt="James Gunn Normal" class="index-image">
+                <img src="/assets/img/james-gunn-as-himself-in-rick-and-morty.avif" alt="James Gunn Hover"
+                    class="index-image2">
+            </div>
+            <h1 class="index-title">James Gunn</h1>
+            <p class="index-subtitle">Visionary Director, Writer, Storyteller</p>
+            <div class="index-quote">
+                <h3 id="quote-text">"I love stories about outsiders who find their own families."</h3>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a id="btn-knowJames" href="/pages/about.html" class="btn">รู้จักเจมส์กันน์</a>
+                <a id="btn-viewWorks" href="/pages/works.html" class="btn">ดูผลงาน</a>
+            </div>
+        </section>
+
+        <section class="featured-works">
+            <h2>ผลงานเด่น</h2>
+            <div class="all-card">
+                <div class="card">
+                    <img src="/assets/img/MV5BMTYwMjY0NTA4M15BMl5BanBnXkFtZTgwMDYyNzgyMjE@._V1_.jpg"
+                        alt="Guardians of the Galaxy" class="card-img">
+                    <h3>Guardians of the Galaxy (2014)</h3>
+                    <p id="movie1desc">ภาพยนตร์ที่ทำให้ James Gunn กลายเป็นชื่อดังในวงการ Marvel</p>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/James-Gunn-The-Suicide-Squad-02.webp" alt="The Suicide Squad"
+                        class="card-img">
+                    <h3>The Suicide Squad (2021)</h3>
+                    <p id="movie2desc">การกลับมาสร้างสรรค์จักรวาล DC ด้วยสไตล์เฉพาะตัว</p>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/the-crazy-conversation-between-kevin-feige-and-james-gunn-after-his-firing-ugh-are-you-going-to-do-superman.jpg"
+                        alt="Peacemaker" class="card-img">
+                    <h3>Superman (2025)</h3>
+                    <p id="movie3desc">ภาพยนตร์ Superman ที่กำกับโดย James Gunn จะเป็นภาพยนตร์เปิดตัวจักรวาล DC ใหม่
+                        (DCU)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://twitter.com/jamesgunn" target="_blank" class="social-icon">
+                <img src="/assets/img/icon/X_icon_2.svg.png" alt="Twitter Icon" class="social-icon-img">
+            </a>
+            <a href="https://www.instagram.com/jamesgunn/" target="_blank" class="social-icon">
+                <img src="/assets/img/icon/Instagram_icon.png" alt="Instagram Icon" class="social-icon-img">
+            </a>
+            <a href="https://www.imdb.com/name/nm0348181/" target="_blank" class="social-icon">
+                <img src="/assets/img/icon/channels4_profile.jpg" alt="IMDB Icon" class="social-icon-img">
+            </a>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p id="copyright-text" class="copyright">© 2025 James Gunn Fan Website. สร้างด้วยความรักและความชื่นชม
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/script.js" defer></script>
+    <!-- <script src="mode.js"></script> -->
+    <script src="/assets/js/change-lange.js"></script>
+</body>
+
+</html>

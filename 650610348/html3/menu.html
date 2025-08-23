@@ -1,0 +1,42 @@
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>เมนู Sweet Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>เมนูของเรา</h1>
+    <nav>
+      <a href="index.html">หน้าหลัก</a>
+      <a href="menu.html">เมนู</a>
+      <a href="checkout.html">ชำระเงิน</a>
+      <a href="status.html">สถานะการจัดส่ง</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="menu-grid" id="menuList">
+      <!-- เมนูจะถูกสร้างด้วย JavaScript -->
+    </section>
+
+    <aside class="cart">
+      <h3>ตะกร้าสินค้า</h3>
+      <ul id="cartList"></ul>
+      <p class="total">รวม: <span id="cartTotal">0</span> บาท</p>
+      <div class="cart-actions">
+        <button id="clearCart" class="btn ghost">ล้างตะกร้า</button>
+        <a id="toCheckout" href="checkout.html" class="btn">ไปชำระเงิน</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; Borcelle Bakery</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333333;
+}
+
+header {
+  background-color: #4c8baf;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+main {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin: auto;
+  max-width: 600px;
+}
