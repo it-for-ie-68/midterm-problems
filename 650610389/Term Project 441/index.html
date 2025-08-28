@@ -1,217 +1,286 @@
-
 <!-- เพิ่มช่องค้นหาด้านบน -->
-<div style="text-align:center; margin: 50px 0px 10px;">
-  <input type="text" id="searchInput" placeholder="ค้นหาร้าน..." 
-         style="padding:10px; width: 400px; border-radius:5px; border:3px solid #03004e; font-size:16px;">
+<div style="text-align: center; margin: 50px 0px 10px">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="ค้นหาร้าน..."
+    style="
+      padding: 10px;
+      width: 400px;
+      border-radius: 5px;
+      border: 3px solid #03004e;
+      font-size: 16px;
+    "
+  />
 </div>
 
 <script>
-// ----- 1) ตอบสนองต่อการพิมพ์ -----
-document.getElementById("searchInput").addEventListener("input", function(){
-  let filter = this.value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-  cards.forEach(function(card){
-    const h2 = card.querySelector("h2");
-    const title = h2 ? h2.textContent.toLowerCase() : "";
-    card.style.display = title.includes(filter) ? "" : "none";
-  });
-});
-</script>
-
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>15 ร้าน Michelin Guide จังหวัดเชียงใหม่</title>
-
-  <!-- Google Fonts (ตัวอย่างเลือก “Prompt”) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- External stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <h1>Michelin Guide Chiang Mai</h1>
-    <p>15 ร้าน Michelin Guide จังหวัดเชียงใหม่ </p>
-
-    <nav>
-      <a class="nav-link active" href="index.html">หน้าแรก</a>
-    </nav>
-  </header>
-
-  <main class="card-grid">
-
-    <!-- Card 1 -->
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2023/12/11/1aa2c35428d0416483966136f7b1a4ca.jpg" alt="โรตีป้าเด" />
-      <div class="card-content">
-        <h2>โรตีป้าเด</h2>
-        <p>โรตีสตรีทฟู้ด กรอบนอก นุ่มใน หอมเนย</p>
-        <a class="btn" href="detail1.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2020/04/30/8a276ca428314e639abdbec1158a4ac4.jpg" alt="ข้าวซอยลุงประกิดกาดก้อม" />
-      <div class="card-content">
-        <h2>ข้าวซอยลุงประกิจกาดก้อม</h2>
-        <p>ข้าวซอยในตำนาน ร้านเล็กๆแต่รสชาติอร่อยเข้มข้น</p>
-        <a class="btn" href="detail2.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <!-- Card 3 -->
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2024/06/16/7575e304a08241e4b3407fa9eb95fbb7.jpg" alt="ข้าวซอยแม่สาย" />
-      <div class="card-content">
-        <h2>ข้าวซอยแม่สาย</h2>
-        <p>ร้านข้าวซอยรสชาติตามต้นตำรับ สูตรที่สืบทอดมากว่า 30 ปี</p>
-        <a class="btn" href="detail3.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npO9Uk6NRrNyrYlpIpDnAGLwDZlgDstBHJEvaEcc8Lus4_eSFWtvqIy_o4VOTY6nBMk36qLfN4vBnDQRe_HFkI0Z4EJ_lZqoQZizNihqUz-kqVVoizw0H2CUAA7jFmt_H8u0lc=s1360-w1360-h1020-rw" alt="เฮือนม่วนใจ๋" />
-      <div class="card-content">
-        <h2>เฮือนม่วนใจ๋</h2>
-        <p>ร้านอาหารเหนือพื้นเมืองต้นตำรับ อร่อยคุ้มค่าในราคาย่อมเยา</p>
-        <a class="btn" href="detail4.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://www.ryoiireview.com/upload/article/202209/1663155756_76de2a3b35acdcbd82c6d02f73e69ed1.jpg" alt="โกเหน่ง" />
-      <div class="card-content">
-        <h2>โกเหน่ง</h2>
-        <p>ร้านปาท่องโก๋ที่ปั้นออกมาเป็นรูปสัตว์ แปลกใหม่ไม่เหมือนใคร</p>
-        <a class="btn" href="detail5.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2018/08/23/d49c0232ceb84702aee247afeec0dd95.jpg" alt="ชุ่ม (สาขาสารภี)" />
-      <div class="card-content">
-        <h2>ชุ่ม (สาขาสารภี)</h2>
-        <p>ร้านอาหารเหนือพื้นเมืองในบรรยากาศโปร่งสบาย</p>
-        <a class="btn" href="detail6.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2025/02/22/5bef2732d1ca407f94434536d1f74c4c.jpg" alt="ก๋วยจั๊บช้างม่อยตัดใหม่" />
-      <div class="card-content">
-        <h2>ก๋วยจั๊บช้างม่อยตัดใหม่</h2>
-        <p>เจ้าต้นตำรับเชียงใหม่ ก๋วยจั๊บสูตรจีนแต้จิ๋วสืบทอดจากรุ่นสู่รุ่น</p>
-        <a class="btn" href="detail7.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://lh3.googleusercontent.com/p/AF1QipOnwrAWcmbxgJD88BLHFsT0t8SW3ocj9hu73Rn7=s1360-w1360-h1020-rw" alt="บ้านลันได" />
-      <div class="card-content">
-        <h2>บ้านลันได</h2>
-        <p>ร้านอาหาร Fine Thai Cuisine อาหารไทยที่ผสมผสานระหว่างวัฒนธรรมพื้นบ้านและรสชาติของวัตถุดิบท้องถิ่น</p>
-        <a class="btn" href="detail8.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2022/09/30/0e417815afb64037ae8a12eefe346935.jpg" alt="กิติพานิช" />
-      <div class="card-content">
-        <h2>กิติพานิช</h2>
-        <p>ร้านอาหารพื้นเมืองสไตล์ล้านนาในตึกโบราณอายุกว่าร้อยปี</p>
-        <a class="btn" href="detail9.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2024/10/19/6c5d9cb51a6e4a92959c6b37289aa2fc.jpg" alt="เอกฉันท์" />
-      <div class="card-content">
-        <h2>เอกฉันท์</h2>
-        <p>ร้านอาหารไทยโบราณที่มีเอกลักษณ์เฉพาะตัว รสชาติดั้งเดิม พร้อมด้วยวัตถุดิบคุณภาพ</p>
-        <a class="btn" href="detail10.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2020/09/10/404bdfc681da4b0683eb7c44af4cadf1.jpg" alt="เสน่ห์" />
-      <div class="card-content">
-        <h2>เสน่ห์</h2>
-        <p>ร้านอาหารฮาลาล บรรยากาศสบายๆ ผ่อนคลายริมแม่น้ำปิง</p>
-        <a class="btn" href="detail11.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2019/11/24/34a3519184fa4f0fae1836cadee9ce2a.jpg" alt="เว-ฬา-ดี" />
-      <div class="card-content">
-        <h2>เว-ฬา-ดี</h2>
-        <p>ร้านอาหารไทยและคาเฟ่ ในคอนเซ็ปต์แบบโมเดิร์น รสชาติอาหารภาคกลางที่มาเสิร์ฟให้ถึงภาคเหนือ</p>
-        <a class="btn" href="detail12.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2024/11/18/84dfce3ebeae45fa955a67fff558bd39.jpg" alt="ทับปิง" />
-      <div class="card-content">
-        <h2>ทับปิง</h2>
-        <p>ร้านอาหารสไตล์ Homemade ทั้งไทยและอิตาเลียน บรรยากาศอบอุ่นเป็นกันเอง</p>
-        <a class="btn" href="detail13.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-        <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2019/12/30/49eda73df6214989890a4db3532d11e8.jpg" alt="บ้านสวนแม่ริม" />
-      <div class="card-content">
-        <h2>บ้านสวนแม่ริม</h2>
-        <p>บรรยากาศบ้านสวน สัมผัสอาหารเหนืออร่อยๆพร้อมกับธรรมชาติที่โอบล้อมไปด้วยป่าเขาและสระน้ำ</p>
-        <a class="btn" href="detail14.html">อ่านต่อ</a>
-      </div>
-    </article>
-
-        <article class="card">
-      <img src="https://img.wongnai.com/p/1920x0/2022/04/28/9156bb44a3b14c89a77a575fdea05cc5.jpg" alt="สวนทูนอิน" />
-      <div class="card-content">
-        <h2>สวนทูนอิน</h2>
-        <p>อาหารสำรับไทยสไตล์อาหารภาคกลาง ลิ้มลองอาหารที่อร่อยสมคำร่ำลือตามสูตรลับเฉพาะที่ตกทอดมาจากคุณแม่</p>
-        <a class="btn" href="detail15.html">อ่านต่อ</a>
-      </div>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    Michelin Guide Chiang Mai
-  </footer>
-
-<!-- นับยอดการเข้าชม -->
- <script>
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card, index) => {
-    const key = `viewCount_${index}`;
-    let count = localStorage.getItem(key) || 0;
-
-    const counter = document.createElement("p");
-    counter.textContent = `เข้าชมแล้ว: ${count} ครั้ง`;
-    counter.style.textAlign = "center";
-    counter.style.fontSize = "15px";
-    counter.style.marginTop = "5px";
-    card.appendChild(counter);
-
-    card.addEventListener("click", () => {
-      count++;
-      localStorage.setItem(key, count);
-      counter.textContent = `เข้าชมแล้ว: ${count} ครั้ง`;
+  // ----- 1) ตอบสนองต่อการพิมพ์ -----
+  document.getElementById("searchInput").addEventListener("input", function () {
+    let filter = this.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(function (card) {
+      const h2 = card.querySelector("h2");
+      const title = h2 ? h2.textContent.toLowerCase() : "";
+      card.style.display = title.includes(filter) ? "" : "none";
     });
   });
 </script>
 
-</body>
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15 ร้าน Michelin Guide จังหวัดเชียงใหม่</title>
+
+    <!-- Google Fonts (ตัวอย่างเลือก “Prompt”) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Michelin Guide Chiang Mai</h1>
+      <p>15 ร้าน Michelin Guide จังหวัดเชียงใหม่</p>
+
+      <nav>
+        <a class="nav-link active" href="index.html">หน้าแรก</a>
+      </nav>
+    </header>
+
+    <main class="card-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2023/12/11/1aa2c35428d0416483966136f7b1a4ca.jpg"
+          alt="โรตีป้าเด"
+        />
+        <div class="card-content">
+          <h2>โรตีป้าเด</h2>
+          <p>โรตีสตรีทฟู้ด กรอบนอก นุ่มใน หอมเนย</p>
+          <a class="btn" href="detail1.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2020/04/30/8a276ca428314e639abdbec1158a4ac4.jpg"
+          alt="ข้าวซอยลุงประกิดกาดก้อม"
+        />
+        <div class="card-content">
+          <h2>ข้าวซอยลุงประกิจกาดก้อม</h2>
+          <p>ข้าวซอยในตำนาน ร้านเล็กๆแต่รสชาติอร่อยเข้มข้น</p>
+          <a class="btn" href="detail2.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2024/06/16/7575e304a08241e4b3407fa9eb95fbb7.jpg"
+          alt="ข้าวซอยแม่สาย"
+        />
+        <div class="card-content">
+          <h2>ข้าวซอยแม่สาย</h2>
+          <p>ร้านข้าวซอยรสชาติตามต้นตำรับ สูตรที่สืบทอดมากว่า 30 ปี</p>
+          <a class="btn" href="detail3.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npO9Uk6NRrNyrYlpIpDnAGLwDZlgDstBHJEvaEcc8Lus4_eSFWtvqIy_o4VOTY6nBMk36qLfN4vBnDQRe_HFkI0Z4EJ_lZqoQZizNihqUz-kqVVoizw0H2CUAA7jFmt_H8u0lc=s1360-w1360-h1020-rw"
+          alt="เฮือนม่วนใจ๋"
+        />
+        <div class="card-content">
+          <h2>เฮือนม่วนใจ๋</h2>
+          <p>ร้านอาหารเหนือพื้นเมืองต้นตำรับ อร่อยคุ้มค่าในราคาย่อมเยา</p>
+          <a class="btn" href="detail4.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://www.ryoiireview.com/upload/article/202209/1663155756_76de2a3b35acdcbd82c6d02f73e69ed1.jpg"
+          alt="โกเหน่ง"
+        />
+        <div class="card-content">
+          <h2>โกเหน่ง</h2>
+          <p>ร้านปาท่องโก๋ที่ปั้นออกมาเป็นรูปสัตว์ แปลกใหม่ไม่เหมือนใคร</p>
+          <a class="btn" href="detail5.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2018/08/23/d49c0232ceb84702aee247afeec0dd95.jpg"
+          alt="ชุ่ม (สาขาสารภี)"
+        />
+        <div class="card-content">
+          <h2>ชุ่ม (สาขาสารภี)</h2>
+          <p>ร้านอาหารเหนือพื้นเมืองในบรรยากาศโปร่งสบาย</p>
+          <a class="btn" href="detail6.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2025/02/22/5bef2732d1ca407f94434536d1f74c4c.jpg"
+          alt="ก๋วยจั๊บช้างม่อยตัดใหม่"
+        />
+        <div class="card-content">
+          <h2>ก๋วยจั๊บช้างม่อยตัดใหม่</h2>
+          <p>
+            เจ้าต้นตำรับเชียงใหม่ ก๋วยจั๊บสูตรจีนแต้จิ๋วสืบทอดจากรุ่นสู่รุ่น
+          </p>
+          <a class="btn" href="detail7.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://lh3.googleusercontent.com/p/AF1QipOnwrAWcmbxgJD88BLHFsT0t8SW3ocj9hu73Rn7=s1360-w1360-h1020-rw"
+          alt="บ้านลันได"
+        />
+        <div class="card-content">
+          <h2>บ้านลันได</h2>
+          <p>
+            ร้านอาหาร Fine Thai Cuisine
+            อาหารไทยที่ผสมผสานระหว่างวัฒนธรรมพื้นบ้านและรสชาติของวัตถุดิบท้องถิ่น
+          </p>
+          <a class="btn" href="detail8.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2022/09/30/0e417815afb64037ae8a12eefe346935.jpg"
+          alt="กิติพานิช"
+        />
+        <div class="card-content">
+          <h2>กิติพานิช</h2>
+          <p>ร้านอาหารพื้นเมืองสไตล์ล้านนาในตึกโบราณอายุกว่าร้อยปี</p>
+          <a class="btn" href="detail9.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2024/10/19/6c5d9cb51a6e4a92959c6b37289aa2fc.jpg"
+          alt="เอกฉันท์"
+        />
+        <div class="card-content">
+          <h2>เอกฉันท์</h2>
+          <p>
+            ร้านอาหารไทยโบราณที่มีเอกลักษณ์เฉพาะตัว รสชาติดั้งเดิม
+            พร้อมด้วยวัตถุดิบคุณภาพ
+          </p>
+          <a class="btn" href="detail10.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2020/09/10/404bdfc681da4b0683eb7c44af4cadf1.jpg"
+          alt="เสน่ห์"
+        />
+        <div class="card-content">
+          <h2>เสน่ห์</h2>
+          <p>ร้านอาหารฮาลาล บรรยากาศสบายๆ ผ่อนคลายริมแม่น้ำปิง</p>
+          <a class="btn" href="detail11.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2019/11/24/34a3519184fa4f0fae1836cadee9ce2a.jpg"
+          alt="เว-ฬา-ดี"
+        />
+        <div class="card-content">
+          <h2>เว-ฬา-ดี</h2>
+          <p>
+            ร้านอาหารไทยและคาเฟ่ ในคอนเซ็ปต์แบบโมเดิร์น
+            รสชาติอาหารภาคกลางที่มาเสิร์ฟให้ถึงภาคเหนือ
+          </p>
+          <a class="btn" href="detail12.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2024/11/18/84dfce3ebeae45fa955a67fff558bd39.jpg"
+          alt="ทับปิง"
+        />
+        <div class="card-content">
+          <h2>ทับปิง</h2>
+          <p>
+            ร้านอาหารสไตล์ Homemade ทั้งไทยและอิตาเลียน บรรยากาศอบอุ่นเป็นกันเอง
+          </p>
+          <a class="btn" href="detail13.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2019/12/30/49eda73df6214989890a4db3532d11e8.jpg"
+          alt="บ้านสวนแม่ริม"
+        />
+        <div class="card-content">
+          <h2>บ้านสวนแม่ริม</h2>
+          <p>
+            บรรยากาศบ้านสวน
+            สัมผัสอาหารเหนืออร่อยๆพร้อมกับธรรมชาติที่โอบล้อมไปด้วยป่าเขาและสระน้ำ
+          </p>
+          <a class="btn" href="detail14.html">อ่านต่อ</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://img.wongnai.com/p/1920x0/2022/04/28/9156bb44a3b14c89a77a575fdea05cc5.jpg"
+          alt="สวนทูนอิน"
+        />
+        <div class="card-content">
+          <h2>สวนทูนอิน</h2>
+          <p>
+            อาหารสำรับไทยสไตล์อาหารภาคกลาง
+            ลิ้มลองอาหารที่อร่อยสมคำร่ำลือตามสูตรลับเฉพาะที่ตกทอดมาจากคุณแม่
+          </p>
+          <a class="btn" href="detail15.html">อ่านต่อ</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">Michelin Guide Chiang Mai</footer>
+
+    <!-- นับยอดการเข้าชม -->
+    <script>
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card, index) => {
+        const key = `viewCount_${index}`;
+        let count = localStorage.getItem(key) || 0;
+
+        const counter = document.createElement("p");
+        counter.textContent = `เข้าชมแล้ว: ${count} ครั้ง`;
+        counter.style.textAlign = "center";
+        counter.style.fontSize = "15px";
+        counter.style.marginTop = "5px";
+        card.appendChild(counter);
+
+        card.addEventListener("click", () => {
+          count++;
+          localStorage.setItem(key, count);
+          counter.textContent = `เข้าชมแล้ว: ${count} ครั้ง`;
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
-

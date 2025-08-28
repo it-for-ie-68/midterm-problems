@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <title>แบบทดสอบความรู้เรื่องพีระมิด</title>
-  <link rel="stylesheet" href="style3.css" />
-</head>
-<body>
-  <header>
-    <nav class="menu">
-      <a href="index.html"><< กลับหน้าหลัก</a> |
-      <a href="pyramid.html"><< กลับหน้าพีระมิด</a>
-    </nav>
-    <h1>แบบทดสอบความรู้เรื่องพีระมิด</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>แบบทดสอบความรู้เรื่องพีระมิด</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <a href="index.html"><< กลับหน้าหลัก</a> |
+        <a href="pyramid.html"><< กลับหน้าพีระมิด</a>
+      </nav>
+      <h1>แบบทดสอบความรู้เรื่องพีระมิด</h1>
+    </header>
 
-  <main>
-    <div class="quiz-container">
-      <form id="quizForm">
-        <p><strong>1. พีระมิดที่ใหญ่ที่สุดในอียิปต์คือพีระมิดใด?</strong></p>
-        <ul>
-          <li><label><input type="radio" name="q1" value="A"> พีระมิดคูฟู (Khufu)</label></li>
-          <li><label><input type="radio" name="q1" value="B"> พีระมิดคาเฟร (Khafre)</label></li>
-          <li><label><input type="radio" name="q1" value="C"> พีระมิดเมนคาเร (Menkaure)</label></li>
-        </ul>
+    <main>
+      <div class="quiz-container">
+        <form id="quizForm">
+          <p><strong>1. พีระมิดที่ใหญ่ที่สุดในอียิปต์คือพีระมิดใด?</strong></p>
+          <ul>
+            <li>
+              <label
+                ><input type="radio" name="q1" value="A" /> พีระมิดคูฟู
+                (Khufu)</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="q1" value="B" /> พีระมิดคาเฟร
+                (Khafre)</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="q1" value="C" /> พีระมิดเมนคาเร
+                (Menkaure)</label
+              >
+            </li>
+          </ul>
 
-        <p><strong>2. พีระมิดขั้นบันไดของโจเซอร์ถูกออกแบบโดยใคร?</strong></p>
-        <ul>
-          <li><label><input type="radio" name="q2" value="A"> Imhotep</label></li>
-          <li><label><input type="radio" name="q2" value="B"> Khufu</label></li>
-          <li><label><input type="radio" name="q2" value="C"> Sneferu</label></li>
-        </ul>
+          <p><strong>2. พีระมิดขั้นบันไดของโจเซอร์ถูกออกแบบโดยใคร?</strong></p>
+          <ul>
+            <li>
+              <label><input type="radio" name="q2" value="A" /> Imhotep</label>
+            </li>
+            <li>
+              <label><input type="radio" name="q2" value="B" /> Khufu</label>
+            </li>
+            <li>
+              <label><input type="radio" name="q2" value="C" /> Sneferu</label>
+            </li>
+          </ul>
 
-        <button type="button" onclick="checkAnswers()">ตรวจคำตอบ</button>
-      </form>
-      <p id="result"></p>
-    </div>
-  </main>
+          <button type="button" onclick="checkAnswers()">ตรวจคำตอบ</button>
+        </form>
+        <p id="result"></p>
+      </div>
+    </main>
 
-  <script>
-    function checkAnswers() {
-      const form = document.getElementById('quizForm');
-      const result = document.getElementById('result');
-      let score = 0;
-      let total = 2;
+    <script>
+      function checkAnswers() {
+        const form = document.getElementById("quizForm");
+        const result = document.getElementById("result");
+        let score = 0;
+        let total = 2;
 
-      // คำตอบที่ถูกต้อง
-      const answers = {
-        q1: 'A',
-        q2: 'A'
-      };
+        // คำตอบที่ถูกต้อง
+        const answers = {
+          q1: "A",
+          q2: "A",
+        };
 
-      // ตรวจคำตอบ
-      for (const q in answers) {
-        const selected = form[q].value;
-        if (selected === answers[q]) {
-          score++;
+        // ตรวจคำตอบ
+        for (const q in answers) {
+          const selected = form[q].value;
+          if (selected === answers[q]) {
+            score++;
+          }
+        }
+
+        // แสดงผล
+        if (score === total) {
+          result.textContent = `เยี่ยมมาก! คุณตอบถูกทุกข้อ (${score}/${total})`;
+          result.style.color = "green";
+        } else {
+          result.textContent = `คุณตอบถูก ${score} จาก ${total} ข้อ ลองทำอีกครั้ง`;
+          result.style.color = "red";
         }
       }
-
-      // แสดงผล
-      if (score === total) {
-        result.textContent = `เยี่ยมมาก! คุณตอบถูกทุกข้อ (${score}/${total})`;
-        result.style.color = 'green';
-      } else {
-         result.textContent = `คุณตอบถูก ${score} จาก ${total} ข้อ ลองทำอีกครั้ง`;
-        result.style.color = 'red';
-      }
-    }
-  </script>
-</body>
-</html> 
+    </script>
+  </body>
+</html>

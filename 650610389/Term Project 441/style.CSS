@@ -2,9 +2,9 @@
   --clr-primary: #0077b6;
   --clr-light: #f6fafe;
   --clr-dark: #012a4a;
-  --gap: 2.0rem;
+  --gap: 2rem;
   --radius: 25px;
-  --shadow: 0 5px 12px rgba(0,0,0,0.1);
+  --shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
 *,
@@ -33,7 +33,7 @@ img {
 .site-header,
 .site-footer {
   text-align: center;
-  padding: 30px 10px
+  padding: 30px 10px;
 }
 
 .site-header h1 {
@@ -48,7 +48,7 @@ img {
   display: grid;
   gap: var(--gap);
   padding: var(--gap);
-  
+
   /* 3‑COLUMN (≥ 960 px) */
   grid-template-columns: repeat(3, 1fr);
 }
@@ -65,7 +65,7 @@ img {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
 }
 
 .card-content {
@@ -121,4 +121,3 @@ img {
     padding: 30px 20px;
   }
 }
-

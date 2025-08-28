@@ -6,8 +6,6 @@
   margin: 20px 0;
 }
 
-
-
 /* ปรับปรุงส่วน info ให้สวยงามขึ้น */
 .info {
   padding: 30px; /* เพิ่มระยะขอบใน */
@@ -15,7 +13,7 @@
   margin: 20px; /* ระยะขอบนอก */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เงานุ่มนวล */
   backdrop-filter: blur(5px); /* เอฟเฟกต์เบลอพื้นหลัง */
-  border: 1px solid rgba(255,255,255,0.3); /* กรอบโปร่งใส */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* กรอบโปร่งใส */
 }
 
 /* ปรับแต่งหัวข้อ h1 */
@@ -26,7 +24,7 @@
   -webkit-text-fill-color: transparent; /* ทำให้ตัวอักษรโปร่งใส */
   font-size: 2.2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
   margin-bottom: 15px; /* ระยะห่างด้านล่าง */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* เงาตัวอักษร */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* เงาตัวอักษร */
 } /* เปลี่ยนตัวอักษรที่ชื่อ*/
 
 /* ปรับแต่งย่อหน้า p */
@@ -51,13 +49,18 @@
 
 /* เอฟเฟกต์แสงวิ่งเมื่อ hover */
 .btnshow a::before {
-  content: ''; /* สร้างองค์ประกอบเสมือน */
+  content: ""; /* สร้างองค์ประกอบเสมือน */
   position: absolute; /* ตำแหน่งสัมบูรณ์ */
   top: 0; /* ชิดด้านบน */
   left: -100%; /* เริ่มต้นนอกซ้าย */
   width: 100%; /* ความกว้างเต็ม */
   height: 100%; /* ความสูงเต็ม */
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); /* แสงไล่สี */
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  ); /* แสงไล่สี */
   transition: left 0.5s; /* การเคลื่อนไหวแสง */
 }
 
@@ -68,26 +71,42 @@
 
 /* เอฟเฟกต์เพิ่มเติมสำหรับปุ่ม YouTube */
 .youtube-btn {
-  background: linear-gradient(45deg, #ff0000, #cc0000) !important; /* ไล่สีแดง */
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #cc0000
+  ) !important; /* ไล่สีแดง */
   transform: perspective(1000px) rotateX(0deg); /* มุมมอง 3D */
   transition: all 0.3s ease !important; /* การเปลี่ยนแปลง */
 } /*เมื่อเอาเมาท์ชี้ที่ปุ่ม*/
 
 .youtube-btn:hover {
-  background: linear-gradient(45deg, #cc0000, #990000) !important; /* ไล่สีเข้มขึ้น */
+  background: linear-gradient(
+    45deg,
+    #cc0000,
+    #990000
+  ) !important; /* ไล่สีเข้มขึ้น */
   transform: perspective(1000px) rotateX(-5deg) translateY(-3px) !important; /* หมุนและยกขึ้น */
   box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3) !important; /* เงาสีแดง */
 } /*เมื่อเอาเมาท์ออกจากปุ่ม*/
 
 /* เอฟเฟกต์เพิ่มเติมสำหรับปุ่ม Facebook */
 .facebook-btn {
-  background: linear-gradient(45deg, #1877F2, #0d5bbf) !important; /* ไล่สีน้ำเงิน */
+  background: linear-gradient(
+    45deg,
+    #1877f2,
+    #0d5bbf
+  ) !important; /* ไล่สีน้ำเงิน */
   transform: perspective(1000px) rotateX(0deg); /* มุมมอง 3D */
   transition: all 0.3s ease !important; /* การเปลี่ยนแปลง */
 } /*เมื่อเอาเมาท์ชี้ที่ปุ่ม*/
 
 .facebook-btn:hover {
-  background: linear-gradient(45deg, #0d5bbf, #084d9e) !important; /* ไล่สีเข้มขึ้น */
+  background: linear-gradient(
+    45deg,
+    #0d5bbf,
+    #084d9e
+  ) !important; /* ไล่สีเข้มขึ้น */
   transform: perspective(1000px) rotateX(-5deg) translateY(-3px) !important; /* หมุนและยกขึ้น */
   box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3) !important; /* เงาสีน้ำเงิน */
 } /*เมื่อเอาเมาท์ออกจากปุ่ม*/
@@ -138,7 +157,7 @@
 }
 
 .btnshow a::after {
-  content: ''; /* สร้างองค์ประกอบเสมือน */
+  content: ""; /* สร้างองค์ประกอบเสมือน */
   position: absolute; /* ตำแหน่งสัมบูรณ์ */
   top: 50%; /* กลางแนวตั้ง */
   left: 50%; /* กลางแนวนอน */
@@ -153,11 +172,25 @@
 
 body {
   animation: bgfade 12s ease-in-out infinite alternate;
-  background: linear-gradient(120deg, #fceabb, #e8eafc, #d4fcf9, #f9e7fe, #b5fffc, #e0c3fc, #f5f7fa , #ffecd2, #fbc2eb, #d9afd9, #b5fffc);
+  background: linear-gradient(
+    120deg,
+    #795c14,
+    #e8eafc,
+    #d4fcf9,
+    #8f23ad,
+    #b5fffc,
+    #e0c3fc,
+    #f5f7fa,
+    #ffecd2,
+    #fbc2eb,
+    #d9afd9,
+    #b5fffc
+  );
   background-size: 400% 400%;
 }
 
-@keyframes bgfade { /* แอนิเมชันเปลี่ยนสีพื้นหัลง */
+@keyframes bgfade {
+  /* แอนิเมชันเปลี่ยนสีพื้นหัลง */
   0% {
     background-position: 0% 50%;
   }
@@ -172,22 +205,20 @@ body {
   }
 }
 
-
-
 .message-box {
   max-width: 500px;
   margin: 50px auto;
   padding: 25px;
-  background: #DDD5F3; 
+  background: #ddd5f3;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-family: 'Noto Sans Thai', sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
 }
 
 .message-box h2 {
   font-size: 1.4em;
-  color: #FF6962;
+  color: #ff6962;
   margin-bottom: 10px;
 }
 
@@ -209,7 +240,7 @@ body {
 .message-box button {
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #FCCF55;
+  background-color: #fccf55;
   color: white;
   border: none;
   border-radius: 10px;
@@ -218,7 +249,7 @@ body {
 }
 
 .message-box button:hover {
-  background-color: #76BC43;
+  background-color: #76bc43;
 }
 
 #displayArea {
@@ -226,4 +257,3 @@ body {
   font-size: 1.1em;
   color: #444;
 }
-

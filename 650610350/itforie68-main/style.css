@@ -144,8 +144,8 @@ body {
   justify-content: center;
   gap: 1rem;
   margin: 2rem auto;
-  width: auto; 
-  max-width: 1200px; 
+  width: auto;
+  max-width: 1200px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -155,11 +155,11 @@ body {
 }
 
 .slideshow img {
-  width: 100%; 
-  max-width: auto; 
-  height: 600px; 
+  width: 100%;
+  max-width: auto;
+  height: 600px;
   min-height: 200px;
-  max-height: 500px; 
+  max-height: 500px;
   border-radius: 8px;
   object-fit: cover;
   background: #fff;
@@ -168,13 +168,13 @@ body {
 .slide-btn {
   background: #fff;
   border: none;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   cursor: pointer;
   border-radius: 50%;
-  width: clamp(35px, 5vw, 50px); 
+  width: clamp(35px, 5vw, 50px);
   height: clamp(35px, 5vw, 50px);
   transition: background 0.2s;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .slide-btn:hover {
@@ -267,4 +267,3 @@ body {
 .logo-row {
   position: relative;
 }
-

@@ -1,21 +1,19 @@
-
 .btn {
   display: inline-block;
-  background-color: #3b060e;     /* สีพื้นหลัง */
-  color: white;                  /* สีตัวอักษร */
-  padding: 10px 20px;            /* ขนาดขอบใน */
-  text-decoration: none;         /* เอาเส้นใต้ลิงก์ออก */
-  border-radius: 8px;            /* มุมโค้งมน */
+  background-color: #3b060e; /* สีพื้นหลัง */
+  color: white; /* สีตัวอักษร */
+  padding: 10px 20px; /* ขนาดขอบใน */
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  border-radius: 8px; /* มุมโค้งมน */
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* เงา */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
   transition: background-color 0.3s, transform 0.2s;
-  
 }
 
 .btn:hover {
-  background-color: #b15260;     /* สีเมื่อชี้เมาส์ */
-  transform: translateY(-2px);   /* ขยับขึ้นนิดหน่อย */
+  background-color: #b15260; /* สีเมื่อชี้เมาส์ */
+  transform: translateY(-2px); /* ขยับขึ้นนิดหน่อย */
 }
 
 body {
@@ -28,8 +26,6 @@ body {
   align-items: center; /* จัดให้อยู่ตรงกลางแนวนอน */
   justify-content: center; /* ตรงกลางแนวตั้ง (เฉพาะถ้าใช้ full-height) */
 }
-
-
 
 .tab {
   width: 100%;
@@ -49,12 +45,12 @@ body {
 .tab-center {
   display: inline-flex;
   gap: 15px;
-  justify-self: center;   /* บังคับให้อยู่กลางจริง */
+  justify-self: center; /* บังคับให้อยู่กลางจริง */
 }
 
 .tab-right {
-  justify-self: end;  
-  padding-right: 2%;    /* ชิดขวา แต่เคารพ padding */
+  justify-self: end;
+  padding-right: 2%; /* ชิดขวา แต่เคารพ padding */
 }
 
 .theme-btn {
@@ -65,26 +61,29 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
 }
-.theme-btn:hover { background-color: #e6b800; }
+.theme-btn:hover {
+  background-color: #e6b800;
+}
 
 .info {
   text-align: center;
   justify-content: center;
   gap: 30px;
-  font-family: 'Noto Sans Thai', sans-serif;
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(242,242,242,0.8) 100%); /* พื้นหลังไล่สี */
+  font-family: "Noto Sans Thai", sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(242, 242, 242, 0.8) 100%
+  ); /* พื้นหลังไล่สี */
   padding: 30px; /* เพิ่มระยะขอบใน */
   border-radius: 20px; /* มุมโค้งมน */
   margin: 20px; /* ระยะขอบนอก */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เงานุ่มนวล */
   backdrop-filter: blur(5px); /* เอฟเฟกต์เบลอพื้นหลัง */
-  border: 1px solid rgba(255,255,255,0.3); /* กรอบโปร่งใส */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* กรอบโปร่งใส */
 }
-
-
-
 
 .btnshow {
   display: flex;
@@ -93,10 +92,7 @@ body {
   margin-top: 20px;
 }
 
-
-
 .youtube-btn {
-  
   background-color: #ff0000;
   border-radius: 8px;
   padding: 6px 12px;
@@ -107,8 +103,7 @@ body {
 }
 
 .facebook-btn {
-  
-  background-color: #1877F2;
+  background-color: #1877f2;
   border-radius: 8px;
   padding: 6px 12px;
   transition: background-color 0.3s;
@@ -117,11 +112,9 @@ body {
   background-color: #2259a1;
 }
 
-
-
 body.dark-mode {
   background: #121212 !important; /* พื้นหลังมืดเรียบ */
-  animation: none !important;    /* ปิด animation สีรุ้ง */
+  animation: none !important; /* ปิด animation สีรุ้ง */
   color: #ffffff !important;
 }
 
@@ -170,28 +163,45 @@ body.dark-mode #displayArea strong {
   color: #ffd166 !important; /* หรือ #fff ก็ได้ */
 }
 
-
 .modal {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,.5);
-  display: none;                /* ซ่อนปกติ */
-  align-items: center; justify-content: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* ซ่อนปกติ */
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
 }
-.modal.show { display: flex; }  /* แสดงเมื่อมีคลาส show */
+.modal.show {
+  display: flex;
+} /* แสดงเมื่อมีคลาส show */
 
-.modal-card{
-  background: #fff; color: #222;
-  padding: 20px 24px; border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.2);
-  max-width: 420px; width: 90%;
+.modal-card {
+  background: #fff;
+  color: #222;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  width: 90%;
   text-align: center;
 }
-.modal-card button{
-  margin-top: 14px; padding: 8px 14px; border: 0;
-  border-radius: 8px; background: #76BC43; color: #fff; cursor: pointer;
+.modal-card button {
+  margin-top: 14px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #76bc43;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* ให้เข้ากับโหมดมืด */
-body.dark-mode .modal-card{ background:#1f1f1f; color:#fff; }
-body.dark-mode .modal-card button{ background:#FFCC00; color:#000; }
+body.dark-mode .modal-card {
+  background: #1f1f1f;
+  color: #fff;
+}
+body.dark-mode .modal-card button {
+  background: #ffcc00;
+  color: #000;
+}

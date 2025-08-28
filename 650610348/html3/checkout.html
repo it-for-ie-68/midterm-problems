@@ -1,50 +1,64 @@
 <html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ชำระเงิน — Borcelle Bakery</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>ชำระเงิน</h1>
-    <nav>
-      <a href="index.html">หน้าหลัก</a>
-      <a href="menu.html">เมนู</a>
-      <a href="status.html">สถานะการจัดส่ง</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ชำระเงิน — Borcelle Bakery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ชำระเงิน</h1>
+      <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="menu.html">เมนู</a>
+        <a href="status.html">สถานะการจัดส่ง</a>
+      </nav>
+    </header>
 
-  <main class="container checkout">
-    <section class="checkout-left">
-      <h2>ข้อมูลลูกค้า</h2>
-      <form id="checkoutForm">
-        <label>ชื่อ<br><input type="text" id="custName" required></label>
-        <label>เบอร์โทร<br><input type="tel" id="custPhone" required></label>
-        <label>ที่อยู่<br><textarea id="custAddress" rows="4" required></textarea></label>
-        <p>ยอดรวม: <strong><span id="summaryTotal">0</span> บาท</strong></p>
-        <button type="submit" class="btn">ยืนยันและแสดง QR</button>
-      </form>
-    </section>
+    <main class="container checkout">
+      <section class="checkout-left">
+        <h2>ข้อมูลลูกค้า</h2>
+        <form id="checkoutForm">
+          <label>ชื่อ<br /><input type="text" id="custName" required /></label>
+          <label
+            >เบอร์โทร<br /><input type="tel" id="custPhone" required
+          /></label>
+          <label
+            >ที่อยู่<br /><textarea
+              id="custAddress"
+              rows="4"
+              required
+            ></textarea>
+          </label>
+          <p>
+            ยอดรวม: <strong><span id="summaryTotal">0</span> บาท</strong>
+          </p>
+          <button type="submit" class="btn">ยืนยันและแสดง QR</button>
+        </form>
+      </section>
 
-    <section class="checkout-right">
-      <h2>สรุปตะกร้า</h2>
-      <ul id="summaryList"></ul>
+      <section class="checkout-right">
+        <h2>สรุปตะกร้า</h2>
+        <ul id="summaryList"></ul>
 
-      <div id="paymentSection" class="hidden">
-        <h3>สแกนเพื่อชำระ</h3>
-        <p>สแกน QR โอนเงินไปที่บัญชี </p>
-        <img src="images/46C01756-B76D-47F7-BAD5-DF72E674200C.jpg"width=200px alt="QR Code"> 
+        <div id="paymentSection" class="hidden">
+          <h3>สแกนเพื่อชำระ</h3>
+          <p>สแกน QR โอนเงินไปที่บัญชี</p>
+          <img
+            src="images/46C01756-B76D-47F7-BAD5-DF72E674200C.jpg"
+            width="200px"
+            alt="QR Code"
+          />
 
-        <p id="paymentNote"></p>
-      </div>
-    </section>
-  </main>
+          <p id="paymentNote"></p>
+        </div>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; Borcelle Bakery</p>
-  </footer>
+    <footer>
+      <p>&copy; Borcelle Bakery</p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

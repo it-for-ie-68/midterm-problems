@@ -15,7 +15,7 @@ const sendBtn = document.getElementById("sendBtn");
 function displayMessages() {
   messageBox.innerHTML = "";
 
-  messages.forEach(msg => {
+  messages.forEach((msg) => {
     const msgDiv = document.createElement("div");
     msgDiv.classList.add("user-message");
     msgDiv.textContent = msg.text;
@@ -32,14 +32,15 @@ function displayMessages() {
     } else {
       const minutes = Math.floor(remaining / 60000);
       const seconds = Math.floor((remaining % 60000) / 1000);
-      countdownEl.textContent = `(${minutes}:${seconds.toString().padStart(2, '0')})`;
+      countdownEl.textContent = `(${minutes}:${seconds
+        .toString()
+        .padStart(2, "0")})`;
     }
 
     msgDiv.appendChild(countdownEl);
     messageBox.appendChild(msgDiv);
   });
 }
-
 
 // ===== บันทึกลง localStorage =====
 function saveMessages() {
@@ -54,7 +55,7 @@ function checkExpiredMessages() {
   const stillExpired = [];
 
   // ย้ายจาก active → expired
-  messages.forEach(msg => {
+  messages.forEach((msg) => {
     if (now - msg.timestamp >= THREE_MINUTES) {
       expiredMessages.push({ ...msg, expiredAt: now });
     } else {
@@ -63,7 +64,7 @@ function checkExpiredMessages() {
   });
 
   // ลบ expired ที่อยู่เกิน EXPIRED_LIFETIME 10 นาที
-  expiredMessages.forEach(msg => {
+  expiredMessages.forEach((msg) => {
     if (now - msg.expiredAt < EXPIRED_LIFETIME) {
       stillExpired.push(msg);
     }
@@ -78,7 +79,7 @@ function checkExpiredMessages() {
 function removeExpiredMessages() {
   const now = Date.now();
   const stillActive = [];
-  messages.forEach(msg => {
+  messages.forEach((msg) => {
     if (now - msg.timestamp >= THREE_MINUTES) {
       expiredMessages.push({ ...msg, expiredAt: now });
     } else {
@@ -96,9 +97,9 @@ function updateMessages() {
 }
 
 // ===== Event ส่งข้อความ =====
-sendBtn.addEventListener("click", function(){
+sendBtn.addEventListener("click", function () {
   const text = messageInput.value.trim();
-  if(text !== ""){
+  if (text !== "") {
     messages.push({ text: text, timestamp: Date.now() });
     saveMessages();
     messageInput.value = "";
@@ -109,27 +110,25 @@ sendBtn.addEventListener("click", function(){
 });
 
 // ===== Enter ส่งข้อความ =====
-messageInput.addEventListener("keydown", function(e){
-  if(e.key === "Enter" && !e.shiftKey){
+messageInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
     sendBtn.click();
   }
 });
 
 // ===== ดูข้อความหมดอายุ =====
-viewExpiredBtn.addEventListener("click", function(){
+viewExpiredBtn.addEventListener("click", function () {
   expiredOutput.innerHTML = "";
   if (expiredMessages.length === 0) {
     expiredOutput.textContent = "ยังไม่มีข้อความหมดอายุ";
   } else {
-    expiredMessages.forEach(msg => {
+    expiredMessages.forEach((msg) => {
       const msgDiv = document.createElement("div");
       const timeStr = new Date(msg.expiredAt).toLocaleTimeString();
       msgDiv.textContent = `${msg.text} (หมดเวลา: ${timeStr})`;
       expiredOutput.appendChild(msgDiv);
-      
     });
-    
   }
 });
 
@@ -138,9 +137,11 @@ displayMessages();
 setInterval(() => {
   checkExpiredMessages();
   displayMessages();
+  console.log("here");
+
   if (expiredVisible) {
     displayExpiredMessages();
   }
-}, 1000);
+}, 2000);
 // อัปเดตทุก 1 วินาที
 setInterval(updateMessages, 1000);

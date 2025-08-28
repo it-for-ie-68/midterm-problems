@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Club Page</title>
-    <link rel="stylesheet" href="club.css">
-</head>
-<body>
+    <link rel="stylesheet" href="club.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About me.html">About Me</a></li>
-                <li><a href="club.html">Club</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About me.html">About Me</a></li>
+          <li><a href="club.html">Club</a></li>
+        </ul>
+      </nav>
     </header>
     <section>
-        <h1>Entaneer Basketball Club (NBC)</h1>
-        <p>I'm basketball player of Entaneer Basketball Club.<br>
-        Follow us on Instagram <br>
-        <a href="https://www.instagram.com/nbc.ent.basketball?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-    nbc.ent.basketball
-  </a> </p>
+      <h1>Entaneer Basketball Club (NBC)</h1>
+      <p>
+        I'm basketball player of Entaneer Basketball Club.<br />
+        Follow us on Instagram <br />
+        <a
+          href="https://www.instagram.com/nbc.ent.basketball?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+        >
+          nbc.ent.basketball
+        </a>
+      </p>
 
-  <div class="club-container">
-    <button class="prev-btn">⬅</button>
+      <div class="club-container">
+        <button class="prev-btn">⬅</button>
 
-    <img id="club-image" src="image1.jpg" alt="Club Image">
+        <img id="club-image" src="image1.jpg" alt="Club Image" />
 
-    <button class="next-btn">➡</button>
-</div>
+        <button class="next-btn">➡</button>
+      </div>
 
-        
-<div id="image-slider" style="text-align:center;">
-  <img id="slider-img" src="" alt="" style="max-width:max-content; border-radius:10px; cursor:pointer;">
-</div>
+      <div id="image-slider" style="text-align: center">
+        <img
+          id="slider-img"
+          src=""
+          alt=""
+          style="max-width: max-content; border-radius: 10px; cursor: pointer"
+        />
+      </div>
 
-<script src="club.js"></script>
+      <script src="club.js"></script>
 
-<script>
-const images = [
-  "S__22683671.jpg",
-  "S__22691843.jpg",
-  "Screen Shot 2025-08-11 at 11.51.47 PM.png",
-  "Screen Shot 2025-08-09 at 6.00.24 PM.png",
-  "Screen Shot 2025-08-11 at 11.53.23 PM.png"
-];
+      <script>
+        const images = [
+          "S__22683671.jpg",
+          "S__22691843.jpg",
+          "Screen Shot 2025-08-11 at 11.51.47 PM.png",
+          "Screen Shot 2025-08-09 at 6.00.24 PM.png",
+          "Screen Shot 2025-08-11 at 11.53.23 PM.png",
+        ];
 
-let currentIndex = 0;
-const sliderImg = document.getElementById("slider-img");
+        let currentIndex = 0;
+        const sliderImg = document.getElementById("slider-img");
 
-sliderImg.addEventListener("click", function() {
-  currentIndex = (currentIndex + 1) % images.length; // วนกลับไปภาพแรกถ้าสุดท้าย
-  sliderImg.src = images[currentIndex];
-});
-</script>
-
+        sliderImg.addEventListener("click", function () {
+          currentIndex = (currentIndex + 1) % images.length; // วนกลับไปภาพแรกถ้าสุดท้าย
+          sliderImg.src = images[currentIndex];
+        });
+      </script>
     </section>
-   
-</body>
+  </body>
 </html>

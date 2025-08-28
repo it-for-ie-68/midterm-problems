@@ -1,38 +1,39 @@
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>สถานะการจัดส่ง</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>ตรวจสอบสถานะการจัดส่ง</h1>
-    <nav>
-      <a href="index.html">หน้าหลัก</a>
-      <a href="menu.html">เมนู</a>
-      <a href="checkout.html">ชำระเงิน</a>
-      <a href="status.html">สถานะการจัดส่ง</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>สถานะการจัดส่ง</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ตรวจสอบสถานะการจัดส่ง</h1>
+      <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="menu.html">เมนู</a>
+        <a href="checkout.html">ชำระเงิน</a>
+        <a href="status.html">สถานะการจัดส่ง</a>
+      </nav>
+    </header>
 
-  <main class="container">
-    <section>
-      <label>หมายเลขคำสั่งซื้อ:
-        <input type="text" id="orderId" placeholder="เช่น ORD1234">
-      </label>
-      <button id="checkStatusBtn" class="btn">ตรวจสอบ</button>
-    </section>
-    <section id="statusResult" class="hidden">
-      <h3>ผลการตรวจสอบ</h3>
-      <p id="statusText"></p>
-    </section>
-  </main>
+    <main class="container">
+      <section>
+        <label
+          >หมายเลขคำสั่งซื้อ:
+          <input type="text" id="orderId" placeholder="เช่น ORD1234" />
+        </label>
+        <button id="checkStatusBtn" class="btn">ตรวจสอบ</button>
+      </section>
+      <section id="statusResult" class="hidden">
+        <h3>ผลการตรวจสอบ</h3>
+        <p id="statusText"></p>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; Borcelle Bakery</p>
-  </footer>
+    <footer>
+      <p>&copy; Borcelle Bakery</p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

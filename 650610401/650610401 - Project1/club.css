@@ -1,84 +1,80 @@
 /* ใช้ Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 /* ตั้งค่า Font Family ให้กับ body */
 body {
-    font-family: "Oswald", sans-serif;
-    margin: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* จัดกลางแนวตั้ง */
-    align-items: center;     /* จัดกลางแนวนอน */
-    background-color: #b3caff;
-    text-align: center; /* จัดข้อความให้อยู่ตรงกลางในแนวนอน */;
+  font-family: "Oswald", sans-serif;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* จัดกลางแนวตั้ง */
+  align-items: center; /* จัดกลางแนวนอน */
+  background-color: #b3caff;
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลางในแนวนอน */
 }
-   
+
 header h1 {
-    font-size: 40px;
-    text-align: center;
-    margin: 50px;
+  font-size: 40px;
+  text-align: center;
+  margin: 50px;
 }
 
 /* ส่วนของ navigation */
 nav ul li {
-    display: inline;
-    list-style-type: none;
-    padding: 1px;
-    margin-right: 15px;    
+  display: inline;
+  list-style-type: none;
+  padding: 1px;
+  margin-right: 15px;
 }
-
 
 nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
 }
-
 
 /* ส่วนของหัวข้อย่อยต่างๆ */
 header {
-    background-color: navy;
-    padding: 30px 300px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
+  background-color: navy;
+  padding: 30px 300px;
+  text-align: left;
+  color: white;
+  font-size: 20px;
 }
 
 h1 {
-    color: navy;
-    font-size: 28px;
-    text-align:center;
+  color: navy;
+  font-size: 28px;
+  text-align: center;
 }
-   p{
-    text-align: center;
-    font-size: 16px;
+p {
+  text-align: center;
+  font-size: 16px;
 }
-
 
 .club-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .club-container img {
-    width: 300px;   /* ปรับให้เล็กลง */
-    height: auto;
-    border-radius: 8px;
+  width: 300px; /* ปรับให้เล็กลง */
+  height: auto;
+  border-radius: 8px;
 }
 
 .club-container button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .club-container button:hover {
-    background-color: #555;
+  background-color: #555;
 }
-

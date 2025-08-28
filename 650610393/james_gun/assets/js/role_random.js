@@ -26,6 +26,7 @@ document.getElementById("role-form").addEventListener("submit", function (e) {
   const category = document.getElementById("category").value;
 
   const roles = Object.keys(characters[category]);
+  console.log(roles);
   const role = roles[Math.floor(Math.random() * roles.length)];
   const imagePath = `/assets/img/${characters[category][role]}`;
 
