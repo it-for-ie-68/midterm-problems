@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-
-
-</head>
-
-<body>
-  <nav class="footer-nav">
-    <div class="name1">
-      <div class="nav-name1">
-        <div class="yourname">
-          <p>Ninnat Klarob</p>
+  <body>
+    <nav class="footer-nav">
+      <div class="name1">
+        <div class="nav-name1">
+          <div class="yourname">
+            <p>Ninnat Klarob</p>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <section class="personal">
-    <div class="name1">
-      <div class="maincontent-name1">
-        <div class="personal-img">
-          <img src="S__52404240.jpg" alt="" width="300">
+    <section class="personal">
+      <div class="name1">
+        <div class="maincontent-name1">
+          <div class="personal-img">
+            <img src="S__52404240.jpg" alt="" width="300" />
+          </div>
+          <div class="maincontent-personal">
+            <h3>About Me</h3>
+            <p id="aboutMe">
+              สวัสดีครับบบบบบบ!!! ผมชื่อนายนินนาท กล้ารบ ชื่อเล่นชื่อนิน
+              รหัสนักศึกษา 650610416 ตอนนี้เรียนอยู่ที่มหาวิทยาลัยเชียงใหม่
+              ชั้นปีที่4 คณะวิศวกรรมศาสตร์ สาขาอุตสาหการครับ เกิดเมื่อวันที่18
+              พฤษศจิกายน พ.ศ.2546 ปัจจุบันตอนนี้ผมก็อายุ22ปี กรุ๊ปเลือดO
+              เป็นเด็กกรุงเทพแท้ๆเลยครับ (เเต่พ่อกับเเม่เป็นคนอีสานกับใต้นะครับ
+              55555) ผมเป็นคนที่ชอบความสนุกสนานเเละเข้ากับคนอื่นได้ง่าย
+              เวลาว่างๆงานอดิเรกของผมก็คือเล่นเกมกับเพื่อนๆครับ
+              เเละชอบกินไก่ทอดมากๆๆๆ อาหารที่ผมชอบก็เลยเป็นไก่ทอด BonChon ครับ
+              ส่วนเพลงที่ผมชอบนั้นส่วนมาก็เป็นเพลงของ Justin Bieber
+              เพราะผมได้ฟังตั้งเเต่สมัยเด็กๆเลยครับบบ
+            </p>
+          </div>
+
+          <!-- ปุ่มเพิ่มลูกเล่น -->
+          <button class="click" onclick="changeBackground()">
+            เปลี่ยนสีพื้นหลัง
+          </button>
+          <button class="click" onclick="toggleAbout()">ซ่อน/แสดงข้อมูล</button>
+          <button class="click2" onclick="showMessage()">
+            กดเพื่อสุ่มหาคำใบ้ครับ !!!
+          </button>
+          <p class="hint" id="message">???????????????????????</p>
+
+          <!-- quiz -->
+          <div class="quiz">
+            <label for="answerInput">Quiz : ผมชอบกินอะไร ?</label><br />
+            <input
+              type="text"
+              id="answerInput"
+              placeholder="พิมพ์คำตอบที่นี่"
+            />
+            <button id="checkBtn">ตรวจคำตอบ</button>
+            <p id="result"></p>
+          </div>
+
+          <!-- timer -->
+          <div class="clock">
+            <h1>คุณอยู่หน้านี้มานานเท่าไหร่?</h1>
+            <p id="timer">0 วินาที</p>
+          </div>
+          <script src="script.js"></script>
         </div>
-        <div class="maincontent-personal">
-          <h3>About Me</h3>
-          <p id="aboutMe">
-            สวัสดีครับบบบบบบ!!! ผมชื่อนายนินนาท กล้ารบ ชื่อเล่นชื่อนิน รหัสนักศึกษา 650610416
-            ตอนนี้เรียนอยู่ที่มหาวิทยาลัยเชียงใหม่
-            ชั้นปีที่4 คณะวิศวกรรมศาสตร์ สาขาอุตสาหการครับ เกิดเมื่อวันที่18 พฤษศจิกายน พ.ศ.2546
-            ปัจจุบันตอนนี้ผมก็อายุ22ปี กรุ๊ปเลือดO เป็นเด็กกรุงเทพแท้ๆเลยครับ
-            (เเต่พ่อกับเเม่เป็นคนอีสานกับใต้นะครับ 55555) ผมเป็นคนที่ชอบความสนุกสนานเเละเข้ากับคนอื่นได้ง่าย
-            เวลาว่างๆงานอดิเรกของผมก็คือเล่นเกมกับเพื่อนๆครับ
-            เเละชอบกินไก่ทอดมากๆๆๆ อาหารที่ผมชอบก็เลยเป็นไก่ทอด BonChon ครับ
-            ส่วนเพลงที่ผมชอบนั้นส่วนมาก็เป็นเพลงของ Justin Bieber เพราะผมได้ฟังตั้งเเต่สมัยเด็กๆเลยครับบบ
-          </p>
-        </div>
-
-        <!-- ปุ่มเพิ่มลูกเล่น -->
-        <button class="click" onclick="changeBackground()">เปลี่ยนสีพื้นหลัง</button>
-        <button class="click" onclick="toggleAbout()">ซ่อน/แสดงข้อมูล</button>
-        <button class="click2" onclick="showMessage()">กดเพื่อสุ่มหาคำใบ้ครับ !!! </button>
-        <p class="hint" id="message">???????????????????????</p>
-
-        <!-- quiz -->
-        <div class="quiz">
-          <label for="answerInput">Quiz : ผมชอบกินอะไร ?</label><br>
-          <input type="text" id="answerInput" placeholder="พิมพ์คำตอบที่นี่">
-          <button id="checkBtn">ตรวจคำตอบ</button>
-          <p id="result"></p>
-        </div>
-
-        <!-- timer -->
-        <div class="clock">
-          <h1>คุณอยู่หน้านี้มานานเท่าไหร่?</h1>
-          <p id="timer">0 วินาที</p>
-
-        </div>
-        <script src="script.js"></script>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="link">
-    <a href="/home.html" class="btn">Home</a>
-    <a href="https://www.bonchonthailand.com/" class="btn">Food</a>
-    <a href="https://www.garena.co.th/" class="btn">Hobby</a>
-    <a href="https://youtu.be/s5oSscNIyIs?si=Z9hYFBM_Tg7KCnlM" class="btn">Song</a>
-
-  </section>
-
-
-
-
-
-</body>
-
+    <section class="link">
+      <a href="/home.html" class="btn">Home</a>
+      <a href="https://www.bonchonthailand.com/" class="btn">Food</a>
+      <a href="https://www.garena.co.th/" class="btn">Hobby</a>
+      <a href="https://youtu.be/s5oSscNIyIs?si=Z9hYFBM_Tg7KCnlM" class="btn"
+        >Song</a
+      >
+    </section>
+  </body>
 </html>

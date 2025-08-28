@@ -1,315 +1,275 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 .container {
-
-    max-width: 1140px;
-    margin: 0 auto;
-
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 nav {
-    background-color: #333;
-    padding: 20px;
+  background-color: #333;
+  padding: 20px;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .logo p {
-    display: flex;
-    color: rgb(249, 246, 246);
-    text-decoration: none;
-    align-items: center;
-    font-size: 40px;
-    justify-content: center;
-    font-family: "Itim", cursive;
+  display: flex;
+  color: rgb(249, 246, 246);
+  text-decoration: none;
+  align-items: center;
+  font-size: 40px;
+  justify-content: center;
+  font-family: "Itim", cursive;
 }
 
-
-
 .maincontent {
-    background-color: rgb(206, 214, 222);
-    padding: 35px 0;
+  background-color: rgb(206, 214, 222);
+  padding: 35px 0;
 }
 
 .maincontent-container {
-    display: flex;
-
+  display: flex;
 }
 
 .maincontent-info {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
 .maincontent-info h3 {
-    font-size: 20px;
-    font-family: "Itim", cursive;
+  font-size: 20px;
+  font-family: "Itim", cursive;
 }
 
 .maincontent-info p {
-    margin: 10px;
-    font-family: "Sarabun", sans-serif;
-
+  margin: 10px;
+  font-family: "Sarabun", sans-serif;
 }
 
 .maincontent-info .maincontent-btn {
-    background-color: rgb(245, 145, 7);
-    color: rgb(255, 255, 255);
-    padding: 8px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: "Itim", cursive;
-
+  background-color: rgb(245, 145, 7);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Itim", cursive;
 }
 
-
-
 .maincontent-img img {
-    width: 600px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 30px;
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .content {
-    background-color: rgb(121, 133, 146);
-    padding: 35px 0;
+  background-color: rgb(121, 133, 146);
+  padding: 35px 0;
 }
 
 .content-container {
-    display: flex;
+  display: flex;
 }
 
 .content-title {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
 .content-title h3 {
-    font-size: 20px;
-    font-family: "Itim", cursive;
+  font-size: 20px;
+  font-family: "Itim", cursive;
 }
 
 .content-title p {
-    margin: 10px;
-    font-family: "Sarabun", sans-serif;
+  margin: 10px;
+  font-family: "Sarabun", sans-serif;
 }
 
 .content-title .content-btn {
-    background-color: rgb(245, 145, 7);
-    color: rgb(255, 255, 255);
-    padding: 8px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: "Itim", cursive;
-
+  background-color: rgb(245, 145, 7);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Itim", cursive;
 }
 
 .content-img img {
-    width: 600px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 30px;
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-
-
-
-
 .name1 {
-    max-width: 1140px;
-    margin: 0 auto;
-
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .footer-nav {
-    padding: 3rem;
-    display: flex;
-    background-color: rgb(183, 100, 41);
+  padding: 3rem;
+  display: flex;
+  background-color: rgb(183, 100, 41);
 }
 
 .nav-name1 {
-    display: flex;
-    justify-content: center
+  display: flex;
+  justify-content: center;
 }
 
 .yourname p {
-    display: flex;
-    color: rgb(244, 243, 243);
-    text-decoration: none;
-    align-items: center;
-    font-size: 56px;
-    justify-content: center;
-    font-family: "Itim", cursive;
-
+  display: flex;
+  color: rgb(244, 243, 243);
+  text-decoration: none;
+  align-items: center;
+  font-size: 56px;
+  justify-content: center;
+  font-family: "Itim", cursive;
 }
 
 .personal {
-
-    padding: 100px 0 200px 0;
-
+  padding: 100px 0 200px 0;
 }
 
 .maincontent-personal h3 {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 30px;
-    padding: 11px;
-    font-family: "Itim", cursive;
-
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  padding: 11px;
+  font-family: "Itim", cursive;
 }
 
 .maincontent-personal p {
-    margin: 10px;
-    text-align: center;
-    font-family: "Sarabun", sans-serif;
+  margin: 10px;
+  text-align: center;
+  font-family: "Sarabun", sans-serif;
 }
 
 .personal-img img {
-    width: 500px;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -60px;
-    border-radius: 30px;
-
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -60px;
+  border-radius: 30px;
 }
-
 
 .link {
-    margin-top: -45px;
-    margin-left: 20px;
-
+  margin-top: -45px;
+  margin-left: 20px;
 }
 
-
-
 .link a {
-    background-color: rgb(245, 145, 7);
-    color: rgb(255, 255, 255);
-    padding: 8px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: "Itim", cursive;
+  background-color: rgb(245, 145, 7);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Itim", cursive;
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(161, 161, 165);
+  width: 100px;
+  height: 100px;
+  background-color: rgb(161, 161, 165);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* part java*/
 
 /* เพิ่มตกแต่งด้วย CSS */
 .click {
-    padding: 10px 15px;
-    background: orange;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 5px;
+  padding: 10px 15px;
+  background: orange;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
 }
 
 .click:hover {
-    background: rgb(252, 191, 118);
+  background: rgb(252, 191, 118);
 }
 
 .click2 {
-    display: flex;
-    padding: 10px 15px;
-    background: orange;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 5px;
+  display: flex;
+  padding: 10px 15px;
+  background: orange;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
 }
 
 .click2:hover {
-    background: rgb(252, 191, 118);
+  background: rgb(252, 191, 118);
 }
-
 
 .hint {
-    font-size: 18px;
-    margin-top: 5px;
-    color: #333;
-    text-align: center;
-    font-family: "Sarabun", sans-serif;
-    background-color: #f0e6d2;
-    border: 2px solid #ccaa66;
-    border-radius: 10px;
-    padding: 15px 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 18px;
+  margin-top: 5px;
+  color: #333;
+  text-align: center;
+  font-family: "Sarabun", sans-serif;
+  background-color: #f0e6d2;
+  border: 2px solid #ccaa66;
+  border-radius: 10px;
+  padding: 15px 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
 .quiz {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 #answerInput {
-    padding: 8px;
-    width: 300px;
-    border: 2px solid #7f7cc6;
-    border-radius: 6px;
-    font-size: 16px;
+  padding: 8px;
+  width: 300px;
+  border: 2px solid #7f7cc6;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 #answerInput:focus {
-    border-color: #007BFF;
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
 }
 
-
 .clock {
-    position: fixed;
-    bottom: 20px;
-    left: 500px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 2px solid #333;
-    box-shadow: 10px 10px 5px rgba(199, 18, 18, 0.2);
-    font-weight: bold;
-
+  position: fixed;
+  bottom: 20px;
+  left: 500px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  box-shadow: 10px 10px 5px rgba(199, 18, 18, 0.2);
+  font-weight: bold;
 }

@@ -1,5 +1,5 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 h1 {
   color: crimson;
@@ -7,24 +7,24 @@ h1 {
   padding: 0px;
   font-size: 5rem; /* Adjust the size as needed */
 }
-img{
-    max-width: 100vw;   /* Image will not exceed viewport width */
-    max-height: 100vh;  /* Image will not exceed viewport height */
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 10 auto;
+img {
+  max-width: 100vw; /* Image will not exceed viewport width */
+  max-height: 100vh; /* Image will not exceed viewport height */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 10 auto;
 }
-p{
-    color: white;
-    margin: 20px;
-    font-size: 1.5rem; /* Adjust the size as needed */
+p {
+  color: white;
+  margin: 20px;
+  font-size: 1.5rem; /* Adjust the size as needed */
 }
-.topic{
-    color: crimson;
+.topic {
+  color: crimson;
 }
-.detail{
-    color: white;
-    margin: 20px;
-    font-size: 1rem; /* Adjust the size as needed */
+.detail {
+  color: white;
+  margin: 20px;
+  font-size: 1rem; /* Adjust the size as needed */
 }

@@ -1,10 +1,12 @@
-*{margin: 0px;
-padding: 0px;
-box-sizing: border-box;}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-nav{
-    padding: 2rem;
-    background-color: rgb(25, 0, 255);
+nav {
+  padding: 2rem;
+  background-color: rgb(25, 0, 255);
 }
 
 h1 {
@@ -13,59 +15,66 @@ h1 {
   text-align: center;
 }
 
-#my-hobby {color: rgb(244, 221, 162);}
-
-#my-contact {color: rgb(255, 102, 0);}
-
-.Hobby {color: rgb(162, 44, 44);}
-
-a:hover {
-    color: cyan;
-    cursor: cell;
+#my-hobby {
+  color: rgb(244, 221, 162);
 }
 
- body{
-    font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(204, 78, 216, 0.625);
-    max-width: auto;
- }
+#my-contact {
+  color: rgb(255, 102, 0);
+}
 
-li{
-    list-style-type: none;
+.Hobby {
+  color: rgb(162, 44, 44);
+}
+
+a:hover {
+  color: cyan;
+  cursor: cell;
+}
+
+body {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(204, 78, 216, 0.625);
+  max-width: auto;
+}
+
+li {
+  list-style-type: none;
 }
 
 h2 {
-    margin: 1rem;
+  margin: 1rem;
 }
 
-ul,li{
-    margin: 1rem 2rem;
+ul,
+li {
+  margin: 1rem 2rem;
 }
 
 ul {
-    text-align: center;
-    color: rgb(127, 51, 220);
+  text-align: center;
+  color: rgb(127, 51, 220);
 }
 
 .link a {
-    background-color: rgb(83, 22, 109);
-    color: rgb(255, 255, 255);
-    padding: 8px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: "Itim", cursive;
-    text-align: end;
+  background-color: rgb(83, 22, 109);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Itim", cursive;
+  text-align: end;
 }
 
 .jojo img {
-   width: 250px;
-   height: auto;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: 2rem;
-   border-radius: 30px;
+  width: 250px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 30px;
 }
 
 /* คอนเทนเนอร์หลักที่รวบรวมทุกอย่าง */
@@ -74,12 +83,12 @@ ul {
   bottom: 50px;
   right: 50px;
   width: 450px;
-  
+
   display: flex;
   flex-direction: column;
   gap: 0;
   border-radius: 5px;
-  
+
   /* เพิ่ม transition เพื่อให้การย่อ/ขยายดูสมูท */
   transition: all 0.3s ease-in-out;
 }
